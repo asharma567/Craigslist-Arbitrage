@@ -24,7 +24,7 @@ def c_list_parser(postings, query_execution_time):
     f_find_cpu           		= lambda x: re_search(r'1\.6|1\.8|1\.86|2\.13|2\.1|2\.0|1\.3|1\.7|1\.4', x)
     f_find_memory        		= lambda x: re_search(r'\b2 gb\b|\b2gb\b|\b4 gb\b|\b4gb\b|\b8 gb\b|\b8gb\b', x)
     f_find_HD            		= lambda x: re_search(r'250|256|516|128|80|64|120', x)
-    
+    f_take_out_office           = lambda x :re.sub(r'office 200[0-9]|office 201[0-9]', '',x.lower())
     
     df = pd.DataFrame()
 
@@ -32,7 +32,7 @@ def c_list_parser(postings, query_execution_time):
 
         str_heading_body = dic['heading'] + " | " + dic['body']
 
-            
+        str_heading_body = f_take_out_office(str_heading_body)            
         #Parsing Negotiatiability
         negotiability = 'NaN'
         if f_negotiability_firm(str_heading_body): negotiability = 'firm'
