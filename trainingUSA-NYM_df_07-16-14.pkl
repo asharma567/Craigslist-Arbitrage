@@ -1,0 +1,1333 @@
+ccopy_reg
+_reconstructor
+p1
+(cpandas.core.frame
+DataFrame
+p2
+c__builtin__
+object
+p3
+NtRp4
+g1
+(cpandas.core.internals
+BlockManager
+p5
+g3
+NtRp6
+((lp7
+cnumpy.core.multiarray
+_reconstruct
+p8
+(cpandas.core.index
+Index
+p9
+(I0
+tS'b'
+tRp10
+((I1
+(I24
+tcnumpy
+dtype
+p11
+(S'O8'
+I0
+I1
+tRp12
+(I3
+S'|'
+NNNI-1
+I-1
+I63
+tbI00
+(lp13
+S'HD_size'
+p14
+aS'apple_care'
+p15
+aS'body'
+p16
+aS'condition'
+p17
+aS'cpu_speed'
+p18
+aS'date_of_pull'
+p19
+aS'email'
+p20
+aS'exp_time'
+p21
+aS'heading'
+p22
+aS'image_url'
+p23
+aS'image_url_ct'
+p24
+aS'loc'
+p25
+aS'loc_dict'
+p26
+aS'loc_metro'
+p27
+aS'memory'
+p28
+aS'negotiability'
+p29
+aS'phone'
+p30
+aS'posting_time'
+p31
+aS'px'
+p32
+aS'upgraded_HD'
+p33
+aS'upgraded_cpu'
+p34
+aS'upgraded_memory'
+p35
+aS'url_to_post'
+p36
+aS'year'
+p37
+at(Nttbag8
+(cpandas.core.index
+Int64Index
+p38
+(I0
+tS'b'
+tRp39
+((I1
+(I32
+tg11
+(S'i8'
+I0
+I1
+tRp40
+(I3
+S'<'
+NNNI-1
+I-1
+I0
+tbI00
+S'\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x00\r\x00\x00\x00\x00\x00\x00\x00\x0e\x00\x00\x00\x00\x00\x00\x00\x0f\x00\x00\x00\x00\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00\x11\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x00\x00\x00\x00\x13\x00\x00\x00\x00\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00\x16\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00\x18\x00\x00\x00\x00\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00\x1a\x00\x00\x00\x00\x00\x00\x00\x1b\x00\x00\x00\x00\x00\x00\x00\x1c\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x00\x00\x00\x00\x00\x1e\x00\x00\x00\x00\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00'
+t(Nttba(lp41
+g8
+(cnumpy
+ndarray
+p42
+(I0
+tS'b'
+tRp43
+(I1
+(I1
+I32
+tg12
+I00
+(lp44
+V128
+p45
+aS'NaN'
+p46
+aV256
+p47
+aV256
+p48
+ag46
+aV128
+p49
+aV128
+p50
+aV128
+p51
+aV128
+p52
+aV128
+p53
+aV128
+p54
+aV128
+p55
+aV128
+p56
+aV80
+p57
+ag46
+aV128
+p58
+aV128
+p59
+aV64
+p60
+aV64
+p61
+aV64
+p62
+aV128
+p63
+aV128
+p64
+aV128
+p65
+aV128
+p66
+aV256
+p67
+aV128
+p68
+ag46
+aV128
+p69
+aV128
+p70
+aV256
+p71
+aV256
+p72
+aV128
+p73
+atbag8
+(g42
+(I0
+tS'b'
+tRp74
+(I1
+(I1
+I32
+tg11
+(S'b1'
+I0
+I1
+tRp75
+(I3
+S'|'
+NNNI-1
+I-1
+I0
+tbI00
+S'\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00'
+tbag8
+(g42
+(I0
+tS'b'
+tRp76
+(I1
+(I3
+I32
+tg12
+I00
+(lp77
+VCosmetically this MacBook is in great condition. It was used sparingly and always had a cover on it. Its the late 2011 edition with a 1.86Ghz Core 2 Duo Processor and 2GB RAM and 128GB solid state drive. Comes with box and charger.\u000aThere`s one minor issue with the MacBook on the display there`s a small line that`s brighter than the surrounding area. The screen is NOT cracked or broken, just a small bright line. You can only see it when the background is white. I`ve tried to show it in the photos.\u000aThe MacBook comes with Mavericks, iLife, Microsoft Office, PhotoShop CS6, Ableton Live and Logic Pro\u000aSelling as I`m upgrading to a MacBook Retina display.
+p78
+aVI have a keyboard for the 2011 13 inch MacBook Air A1369. The keyboard doesn`t work properly, sold as is.\u000aYou can use the keyboard for keys or repair.
+p79
+aVSelling my brand new MacBook Air which has never been used. Box has been opened though the macbook has not been taken out of the plastic.\u000aIts the upgraded version that comes with the latest Haswell 1.4Ghz Processor, 8GB RAM and 256GB Flash Drive.\u000aIt is 100% brand new and never used and comes with 1 year full Apple Warranty.\u000aIts the upgraded version that retails for $1449 plus tax which brings it to $1577.\u000aAble to meet you at the Apple Store or at a Starbucks in the West Village or SoHo.\u000aIF you`re interested or have additional questions please call me 917 six zero seven 64 08
+p80
+aVI`m selling my MacBook Air 13.3", it comes with the larger solid state drive / flash drive of 256GB.\u000aIts in great shape, and comes in the box and charger.\u000aComes with Mavericks and some software like Microsoft Office and PhotoShop CS6.\u000aSpecs are\u000a13.3-inch (diagonal) LED-backlit glossy widescreen display, 1440-by-900 resolution\u000a4GB memory\u000a256GB flash storage\u000a720p FaceTime HD camera
+p81
+aVI cracked the screen on my 13.3 inch macbook air. I`ve been using it as a mac mini i.e. its hooked up to an external screen and it works perfectly well.\u000aAs I`ve been using as a desktop computer I removed the solid state drive and connected a hard drive to the USB port.\u000aIf you`re looking at cheap macbook air, then this is fine for you.\u000aIts a 2010 MacBook Air with 1.86Ghz Processor and upgraded 2GB RAM. Works perfectly, included in the price is ONLY the Macbook Air. The external hard drive and monitor are not included.\u000aCosmetically looks great.\u000aYou could also install a new screen and use it as a macbook air.\u000aIncluded is just macbook. Charger is not included.\u000aPrice is FIRM
+p82
+aVI`m selling a brand new in box Macbook Air 13" that I received as a gift.\u000aHere are the specs:\u000aModel: MD760LL/B\u000aProcessor: Intel® 4th Generation Core\u2122 i5\u000a1.4GHz\u000aScreen: HD+LED glossy screen\u000aScreen Size: 13.3"\u000aRAM: 4GB\u000aHard Drive Type: Flash SSD - 128GB\u000aI am asking for $850 CASH firm for it. Nothing less. It also comes with a 6 month membership for anti-virus software. Email me with serious inquiries and questions only\u000a!
+p83
+aVI`m selling a brand new in box Macbook Air 13" that I received as a gift.\u000aHere are the specs:\u000aModel: MD760LL/B\u000aProcessor: Intel® 4th Generation Core\u2122 i5\u000a1.4GHz\u000aScreen: HD+LED glossy screen\u000aScreen Size: 13.3"\u000aRAM: 4GB\u000aHard Drive Type: Flash SSD - 128GB\u000aI am asking for $850 CASH firm for it. Nothing less. It also comes with a 6 month membership for anti-virus software. Email me with serious inquiries and questions only\u000a!
+p84
+aVselling macbook air 13" i5\u000aadobe cs6\u000afinal cut pro x\u000amicrosoft office 2011\u000aapeture 3\u000alogic pro x\u000acall or text only\u000a show contact info\u000ameet up only at a safe public place ,\u000aThank you for your time
+p85
+aVWill only take 920$ in cash only. Only will meet up at a public place for a safe transaction for the both of us. Hagglers will be ignored. Already cheap. Apple MacBook Air MD760LL/B 13.3-Inch Laptop (NEWEST VERSION) Never used, Never opened, NOT refurbished, All Brand NEW! Specifications: Display 13.3-inch (diagonal) LED-backlit glossy widescreen display with support for millions of colors Processor 1.4 GHz dual-core Intel Core i5 (Turbo Boost up to 2.7 GHz) with 3 MB shared L3 cache Storage 128 GB flash storage Memory 4 GB of 1600 MHz LPDDR3 memory (maximum of 8 GB) Graphics Intel HD Graphics 5000 internal graphics processor with 512 MB of GDDR5 memory Video Thunderbolt digital video output (native Mini DisplayPort output); compatible with DVI, VGA, and dual-link DVI output using optional adapters; HDMI audio and video output using third-party Mini DisplayPort to HDMI Adapter (sold separately) Audio Stereo speakers; dual microphones; headphone port; support for Apple iPhone headset with microphone Connections: One Thunderbolt port (up to 10 Gbps) Two USB 3 ports (up to 5 Gbps) SDXC card slot MagSafe 2 power port Communications 802.11ac Wi-Fi wireless networking (802.11a/b/g/n compatible); Bluetooth 4.0 Camera HD 720p FaceTime camera Size and Weight 12.8 x 8.94 x 0.68 inches; 2.96 pounds
+p86
+aVWill only take 920$ in cash only. Only will meet up at a public place for a safe transaction for the both of us. Hagglers will be ignored. Already cheap. Apple MacBook Air MD760LL/B 13.3-Inch Laptop (NEWEST VERSION) Never used, Never opened, NOT refurbished, All Brand NEW! Specifications: Display 13.3-inch (diagonal) LED-backlit glossy widescreen display with support for millions of colors Processor 1.4 GHz dual-core Intel Core i5 (Turbo Boost up to 2.7 GHz) with 3 MB shared L3 cache Storage 128 GB flash storage Memory 4 GB of 1600 MHz LPDDR3 memory (maximum of 8 GB) Graphics Intel HD Graphics 5000 internal graphics processor with 512 MB of GDDR5 memory Video Thunderbolt digital video output (native Mini DisplayPort output); compatible with DVI, VGA, and dual-link DVI output using optional adapters; HDMI audio and video output using third-party Mini DisplayPort to HDMI Adapter (sold separately) Audio Stereo speakers; dual microphones; headphone port; support for Apple iPhone headset with microphone Connections: One Thunderbolt port (up to 10 Gbps) Two USB 3 ports (up to 5 Gbps) SDXC card slot MagSafe 2 power port Communications 802.11ac Wi-Fi wireless networking (802.11a/b/g/n compatible); Bluetooth 4.0 Camera HD 720p FaceTime camera Size and Weight 12.8 x 8.94 x 0.68 inches; 2.96 pounds
+p87
+aVHi, I`m selling my laptop which is in mint condition, comes with everything (original box, cables and receipt from apple store)\u000aCore i5 1.7ghz / 4gb ram / 128gb ssd\u000aLastest OSX (maverick)\u000aI live in East Harlem but I can also bring it to work (soho)
+p88
+aVMACBOOK AIR 13"MINT\u000aBARELY USED\u000aApple MacBook Air 13" LIKE NEW\u000aCPU i5 1.3GHz\u000aSSD 128GB\u000aRAM 4GB\u000aVRAM 1.5GB\u000aMS Office 2011\u000aPhotoshop CS6\u000aLightroom\u000aPerfect Photo Suite\u000aiMovie\u000aiDVD\u000aiWEB
+p89
+aVMACBOOK AIR 13" LIKE NEW\u000aIN HARD SHELL\u000aPROCESSOR 1.8GHz\u000aRAM 4GB\u000aSSD 128GB\u000aMAVERICKS\u000aOFFICE 2011\u000aPHOTOSHOP\u000aLIGHTROOM\u000a+MORE\u000aPLZ SEE PICTURES
+p90
+aVUp for sale is a 13.3" MacBook Air with a CRACKED SCREEN.\u000aRunning OS X Mountain Lion. 1.7 GHz i5 Processor and 4GB of ram.\u000aLaptop is in perfect working condition. Charger will be included. I have the original packaging and everything.\u000aThe body is PERFECT it was kept in the moshi laptop protector since it was taken out the box on day 1. I`ve removed it because it`s dirty. Almost NO scratches on the exterior of the laptop it`s basically brand new.\u000aALSO HAVE:\u000aApple Trackpad: $55.00\u000aApple Keyboard: $55.00\u000aBUY BOTH FOR $100\u000aSamsung 27" Monitor: $180.00 Ask me for pictures for these items!
+p91
+aVUp for sale I have a MacBook Air 13". We just upgraded to a bigger screen and have no use for this one. This laptop is in excellent condition, 100% fully functional. It was kept in a non-smoker environment. The hard drive operates very quiet. The battery holds an excellent charge. The screen displays a crisp, bright image. iSight camera functions properly. I formatted the hard drive clean with Mac OS X 10.6.8. Snow Leopard. I also installed a bundle of very useful software listed below including Final Cut Pro X, CS6, Logic, Reason 5 and more. Laptop is being sold along with charger.\u000a show contact info\u000aSoftware Installed: (All software have been activated for full use)\u000a-Adobe CS6 Master Collection (Photoshop, Dreamweaver, Indesign, etc.)\u000a-Logic 9 Pro (Volume License)\u000a-Final Cut Pro X (Includes Motion 5 and Compressor 4) *I can also install the previous version of Final Cut Studio -Final Cut Studio 3 (Includes Final Cut Pro/Also Volume license)\u000a-iLife 11\u000a-iWork\u000a-Office 2011 for Mac (Word, Excel, PowerPoint, Outlook)\u000a-VMWare Fusion 5 (Run Windows and Mac simultaneously, I can install XP, Vista, or Windows 7 for you.)\u000a-AppZapper\u000a-Roxio Toast Titanium 10\u000a-Aperture 3\u000a-Reason 5\u000a-FEEL FREE TO ASK ANY QUESTIONS AND I WILL DO THE BEST I CAN TO ANSWER THEM.\u000a-CASH AND CARRY ONLY (I can meet you in a public place. e.g..Starbucks etc.)\u000a-NO SHIPPING ANYWHERE\u000a-FIRST COME FIRST SERVED
+p92
+aV2013 MacBook Air 13 inch 1.3 ghz 4 gb of memory 128gb hard drive mint condition still under apple factory warranty Untill dec 2014 comes with brand new charger $720 cash\u000a show contact info
+p93
+aVI`m selling a flawless, brand new condition Macbook Air 13" 2013 Model. No scratches, dents, scuff marks, of any sort. Pristine shape. LOADED WITH SOFTWARES! Battery cycle count is at 60 . Mavericks is installed.\u000aThis machine is extremely powerful, fast, and reliable. With PCIe-based flash storage SSD, boot-up time is roughly 3-4 seconds. The battery life is just phenomenal and unbelievable. On a full charge, and with applications running at full throttle, it lasts about 10-11 hours - thanks to the advanced HASWELL processor.\u000aPrice is firm, given the excellent brand new condition, and with all the softwares that alone are worth over $500. Serious inquiries only.\u000aSOFTWARES INCLUDED: Final Cut Pro X, MS Office 2011, Adobe CS6 Master Collection (Acrobat X Pro, After Effects CS6, Audition CS6, Bridge CS6, Dreamweaver CS6, Illustrator CS6, InDesign CS6, Media Encoder CS6, Premiere Pro CS6, Photoshop CS6, Prelude CS6, Flash Professional CS6), iLife, iWorks, iMovie, GarageBand, iPhoto, KeyNote, Pages, Numbers, Aperture 3, Pro Logic!!!!\u000aSpecs:\u000aRAM: 4GB 1600 MHz DDR3\u000aHD: 128GB SSD\u000aProcessor: 1.3 Intel Core i5 Haswell ULT with TurboBoost to 2.6GHZ
+p94
+aVI am selling Apple Macbook Air 13" c2d 2.13ghz 2gb,64gb SSD\u000aSuper light and portable with full version of Office, Aperture 3, and iLife11!\u000aComes with New Mavericks 10.9.2 with backlight keyboard!\u000aIf you are interested please give me a call / text\u000a show contact info\u000a Thank you
+p95
+aVI am selling my Apple Macbook Air 13" c2d 2.13ghz 2gb,64gb SSD\u000aSuper light and portable with full version of Office, Aperture 3, and iLife11!\u000aComes with New Mavericks 10.9.2 with backlight keyboard!\u000aIf you are interested please give me a call / text\u000a show contact info\u000a Thank you
+p96
+aVI am selling my Like New! Apple Macbook Air 13" c2d 2.13ghz 2gb,64gb SSD + New Battery!!\u000aSuper light and portable with full version of Office, Aperture 3, and iLife11!\u000aComes with New Mavericks 10.9.2 with backlight keyboard!\u000aIf you are interested please give me a call / text\u000a show contact info\u000a Thank you
+p97
+aVApple MacBook Air 13.3/1.4GHz/4GB/128GB (MD760LL/B)\u000aLatest Model BRAND NEW in the box Factory Sealed\u000aLooking for $800 or BEST OFFER!\u000aText Angel\u000a show contact info
+p98
+aVApple MacBook Air 13.3/1.4GHz/4GB/128GB (MD760LL/B)\u000aLatest Model BRAND NEW in the box Factory Sealed\u000aLooking for $800 or BEST OFFER!\u000aText Angel\u000a show contact info
+p99
+aVApple MacBook Air 13.3/1.4GHz/4GB/128GB (MD760LL/B)\u000aLatest Model BRAND NEW in the box Factory Sealed\u000aLooking for $800 or BEST OFFER!\u000aText Angel\u000a show contact info
+p100
+aVselling macbook air 13" i5\u000aadobe cs6\u000afinal cut pro x\u000amicrosoft office 2011\u000aapeture 3\u000alogic pro x\u000acall or text only\u000a show contact info\u000ameet up only at a safe public place ,\u000aThank you for your time
+p101
+aVI have a Macbook Air. I love the machine its crazy fast. But I want to get something a bit simpler.\u000aProcessor 1.7 GHz Intel Core i5\u000aMemory 4 GB 1333 MHz DDR3\u000aGraphics Intel HD Graphics 3000 384 MB\u000a256GB SSD\u000a Adult owned running Mavericks. A couple slight scratches on the corners.\u000aOr I am looking for $850 CASH or will trade for Google Pixel w/LTE\u000aNO PAYPAL\u000aNO SHIPPING\u000aplease either respond to the ad or text only to 973 five hundred 8743\u000aThanks for looking
+p102
+aVHello, I have practically new MacBook Air 13" MD760LL/A\u000aI used it several times for school, but decided to upgrade to Pro. I reset it already, so you can use it right away.\u000aSpec: 13.3/1.3GHz/4Gb/128GB Flash storage\u000aSerious buyers, please. No PayPal.
+p103
+aVmacbook air like new i5 processor loaded with software, meet up at the apple store\u000aadobe cs6\u000afinal cut pro x\u000amicrosoft office 2011\u000aapeture 3\u000alogic pro x\u000acall or text only\u000a show contact info\u000ameet up only at a safe public place ,\u000aThank you for your time
+p104
+aVselling macbook air 13" i5\u000aadobe cs6\u000afinal cut pro x\u000amicrosoft office 2011\u000aapeture 3\u000alogic pro x\u000acall or text only\u000a show contact info\u000ameet up only at a safe public place ,\u000aThank you for your time
+p105
+aVFor sale i have my New Barely Used MacBook Air 13" HD Screen\u000aRestored to factory setting then installed OSX 10.9 Mavericks along with:\u000aMS Office Suite/iLife/Final Cut Pro/Virtual DJ Pro and more...\u000aThe Laptop looks New and has Apple Care until end of this Year.\u000aIt was purchased in early 2012 and well taken care of\u000aIntel Core i7 Processor. Upgraded to 4GB Ram and 128GB SSD HD.\u000aI paid extra for Ms Office professional 2011! Great program included!\u000aPrice is pretty low and Firm. Please do not low ball.\u000aIf you`re interested please email me your number and ill get back to you asap!
+p106
+aVMacBook Air 13-inch Everything works perfect, great condition\u000a13-inch - 1.7GHz intel Core i5 Processor - 4GB Memory - 256GB SSD\u000aFaceTime - Bluetooth - Thunderbolt - Backlit Keyboard and more. . .\u000aTrade only iPad Air or iPad Mini WIFI + cash
+p107
+aVMacBook Air, Great condition, everything works perfect\u000aBattery holds very good charge, comes with charger and Black Leather Case\u000a13-inch - 1.86GHz - 2GB Ram - 256GB SSD Flash Drive
+p108
+aV2.13ghz\u000a2GB ram\u000a128GB SSD ( Very fast )\u000aPrimarily used for video/music and photo editing. Great machine, it is working 100 percent. Selling because i just bought an imac and will no longer use it as much. Battery holds a great charge. Im selling it with charger as well. You can test it out completely before buying. Looking to meet inside a safe location like a starbucks for exchnage. Come loaded with a bunch of apps ( All full installs ): CS5 master collection, Final cut express, Logic pro 9, Reason 5, Ableton live 8, Microsoft office 2011 for mac, Ilife 11, Iwork 09, Aperture 3, Toast titanium 2010 and vm ware fusion 4. Please email me with a number so i can call you back. I RESPOND VERY QUICKLY. Thanks for looking.
+p109
+aVgood
+p110
+aVnew
+p111
+aVnew
+p112
+aVnew
+p113
+aVnew
+p114
+aVnew
+p115
+aNaNaNaNaVlike new
+p116
+aNaNaNaNaNaNaNaNaNaVnew
+p117
+aVnew
+p118
+aVnew
+p119
+aNaVnew
+p120
+aVlike new
+p121
+aNaNaVnew
+p122
+aNaVnew
+p123
+aVnew
+p124
+aV1.8
+p125
+ag46
+aV1.4
+p126
+aV1.8
+p127
+aV1.8
+p128
+aV1.4
+p129
+aV1.4
+p130
+ag46
+aV1.4
+p131
+aV1.4
+p132
+aV1.7
+p133
+aV1.3
+p134
+aV1.8
+p135
+aV1.7
+p136
+ag46
+aV1.3
+p137
+aV1.3
+p138
+aV2.13
+p139
+aV2.13
+p140
+aV2.13
+p141
+aV1.4
+p142
+aV1.4
+p143
+aV1.4
+p144
+ag46
+aV1.7
+p145
+aV1.3
+p146
+ag46
+ag46
+ag46
+aV1.7
+p147
+aV1.8
+p148
+aV2.13
+p149
+atbag8
+(g42
+(I0
+tS'b'
+tRp150
+(I1
+(I1
+I32
+tg11
+(S'M8'
+I0
+I1
+tRp151
+(I4
+S'<'
+NNNI-1
+I-1
+I0
+((d(S'ns'
+I1
+I1
+I1
+tttbI00
+S'X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13X\xc29\xfe\xb0\x80\x81\x13'
+tbag8
+(g42
+(I0
+tS'b'
+tRp152
+(I1
+(I4
+I32
+tg12
+I00
+(lp153
+Vq4wq2-4541409662@sale.craigslist.org
+p154
+aV6pw29-4555008117@sale.craigslist.org
+p155
+aVmp3rh-4547304812@sale.craigslist.org
+p156
+aVnvtx6-4541401234@sale.craigslist.org
+p157
+aVwvgmk-4526660620@sale.craigslist.org
+p158
+aVkpzbs-4532624670@sale.craigslist.org
+p159
+aVrwfx9-4544238145@sale.craigslist.org
+p160
+aVv56tk-4557141313@sale.craigslist.org
+p161
+aNaNaVxcvv5-4560513870@sale.craigslist.org
+p162
+aVr62cj-4533612598@sale.craigslist.org
+p163
+aV4kbhn-4550306308@sale.craigslist.org
+p164
+aV7zfpb-4560362391@sale.craigslist.org
+p165
+aVdhrbw-4560274230@sale.craigslist.org
+p166
+aVz7dtm-4534618992@sale.craigslist.org
+p167
+aVbd9mh-4560070931@sale.craigslist.org
+p168
+aVpbfdw-4532493596@sale.craigslist.org
+p169
+aVxpsqg-4532494898@sale.craigslist.org
+p170
+aV5rntg-4522961264@sale.craigslist.org
+p171
+aV3dx5h-4559654361@sale.craigslist.org
+p172
+aV6b6xw-4559651436@sale.craigslist.org
+p173
+aVtz7md-4555312749@sale.craigslist.org
+p174
+aVz9crw-4544748624@sale.craigslist.org
+p175
+aVs4r2s-4550895285@sale.craigslist.org
+p176
+aV4bqbk-4555457487@sale.craigslist.org
+p177
+aVrdngm-4543934449@sale.craigslist.org
+p178
+aV8mjdw-4550534368@sale.craigslist.org
+p179
+aVshjqg-4558163423@sale.craigslist.org
+p180
+aVnmnxc-4544143320@sale.craigslist.org
+p181
+aV2j2xh-4544121898@sale.craigslist.org
+p182
+aV7ct5p-4558044417@sale.craigslist.org
+p183
+aS'2014-08-23 20:44:06'
+p184
+aS'2014-08-23 20:43:50'
+p185
+aS'2014-08-23 20:41:06'
+p186
+aS'2014-08-23 20:39:19'
+p187
+aS'2014-08-23 20:37:37'
+p188
+aS'2014-08-23 19:42:54'
+p189
+aS'2014-08-23 19:42:48'
+p190
+aS'2014-08-23 14:04:36'
+p191
+aS'1969-12-31 16:00:00'
+p192
+aS'1969-12-31 16:00:00'
+p193
+aS'2014-08-23 10:06:01'
+p194
+aS'2014-08-23 09:28:22'
+p195
+aS'2014-08-23 09:27:45'
+p196
+aS'2014-08-23 08:53:16'
+p197
+aS'2014-08-23 08:08:29'
+p198
+aS'2014-08-23 07:02:13'
+p199
+aS'2014-08-23 05:54:17'
+p200
+aS'2014-08-22 19:14:59'
+p201
+aS'2014-08-22 19:14:53'
+p202
+aS'2014-08-22 19:14:46'
+p203
+aS'2014-08-22 18:36:50'
+p204
+aS'2014-08-22 18:34:40'
+p205
+aS'2014-08-22 18:32:26'
+p206
+aS'2014-08-22 18:02:52'
+p207
+aS'2014-08-22 16:23:29'
+p208
+aS'2014-08-22 12:07:41'
+p209
+aS'2014-08-22 12:02:02'
+p210
+aS'2014-08-22 07:07:57'
+p211
+aS'2014-08-22 01:15:22'
+p212
+aS'2014-08-21 21:50:55'
+p213
+aS'2014-08-21 21:49:55'
+p214
+aS'2014-08-21 21:17:54'
+p215
+aS'Apple MacBook Air 13.3 with 128GB SSD Great Condition'
+p216
+aS'Apple MacBook Air 13 2011 Backlight Keyboard - Broken ONLY'
+p217
+aS'BRAND NEW LATEST MACBOOK AIR 13 INCH UPGRADED 1.4Ghz Intel 8GB RAM 256'
+p218
+aS'Like New MacBook Air 13 1.8ghz intel i5 - 256GB SSD'
+p219
+aS'Apple MacBook Air 13 Mac Mini / Home Server - No Screen Works Great'
+p220
+aS'Apple Macbook Air 13 NEW'
+p221
+aS'BRAND NEW Apple Macbook AIR 13'
+p222
+aS'macbook air 13  i5 4gb 128 ssd'
+p223
+aS"$920, NEW Macbook Air 13.3' Screen MD760LL/B Latest Model"
+p224
+aS"$920, NEW Macbook Air 13.3' Screen MD760LL/B Latest Model"
+p225
+aS'Macbook Air 13 inch'
+p226
+aS'MACBOOK AIR 13 MINT LATEST'
+p227
+aS'MACBOOK AIR 13 LIKE NEW'
+p228
+aS'Apple MacBook Air 13.3 Laptop 2010 USED with cracked screen'
+p229
+aS'Macbook Air 13 CS6/FinalCut Pro/Lion/Logic/Office'
+p230
+aS'MacBook Air 13inch mid 2013 4gb memory 128gb hard drive mint condition'
+p231
+aS'MacBook Air 13 late 2013 4GB/128GB'
+p232
+aS'Apple Macbook Air 13 c2d 2.13ghz 2gb,64gb SSD  Office  More'
+p233
+aS'Apple Macbook Air 13 c2d 2.13ghz 2gb,64gb SSD  Office  More'
+p234
+aS'Like New Apple Macbook Air 13 c2d 2.13ghz 2gb,64gb SSD  New Battery'
+p235
+aS'Apple MacBook Air 13.3/1.4GHz/4GB/128GB MD760LL/B'
+p236
+aS'Apple MacBook Air 13.3/1.4GHz/4GB/128GB MD760LL/B'
+p237
+aS'Apple MacBook Air 13.3/1.4GHz/4GB/128GB MD760LL/B'
+p238
+aS'macbook air 13  i5 4gb 128 ssd'
+p239
+aS'late 2011 Macbook Air 13 i5 4gb ram 256gb SSD trade for Google Pixel'
+p240
+aS'MacBook Air 13 Mid 2013'
+p241
+aS'macbook air 13  i5   ,  adobe cs6 master collection - office 2011'
+p242
+aS'macbook air 13  i5 4gb 128 ssd'
+p243
+aS'MacBook Air 13 i7 Processor 128GB SSD HD and Extras'
+p244
+aS'MacBook Air - 13 inch 256GB'
+p245
+aS'MacBook Air 13 - 256GB'
+p246
+aS'For Sale  Macbook Air 13, CS5,Final cut,Ms office,Logic,Ilife'
+p247
+aS'http://images.craigslist.org/00l0l_52s5lt1jtyM_600x450.jpg|http://images.craigslist.org/00I0I_1qm5h4gBZB4_600x450.jpg|http://images.craigslist.org/00808_lE2i1rk5GxZ_600x450.jpg'
+p248
+aS'http://images.craigslist.org/00i0i_ibLKRNv7l7I_600x450.jpg|http://images.craigslist.org/01111_cch5bkkjid2_600x450.jpg'
+p249
+aS'http://images.craigslist.org/00S0S_6terCQl1ngU_600x450.jpg'
+p250
+aS'http://images.craigslist.org/00I0I_2pACiFRR22y_600x450.jpg|http://images.craigslist.org/00n0n_ctZqGdFo0nq_600x450.jpg|http://images.craigslist.org/00F0F_1lbWafp2zxG_600x450.jpg|http://images.craigslist.org/00Z0Z_haD83W5Pk7X_600x450.jpg'
+p251
+aS'http://images.craigslist.org/00V0V_bRSfVhyfOOT_600x450.jpg'
+p252
+aS'http://images.craigslist.org/00T0T_5XZa1pyxGKU_600x450.jpg|http://images.craigslist.org/00y0y_6ALjeRlIqkk_600x450.jpg'
+p253
+aS'http://images.craigslist.org/01212_cARimXylmtI_600x450.jpg|http://images.craigslist.org/00000_frCkgzQ8O0p_600x450.jpg'
+p254
+aS''
+aS'http://images2.backpage.com/imager/u/large/133919138/IMG_20140622_153043.jpg'
+p255
+aS'http://images2.backpage.com/imager/u/large/133919138/IMG_20140622_153043.jpg'
+p256
+aS'http://images.craigslist.org/00t0t_j3Uage5qoxT_600x450.jpg'
+p257
+aS'http://images.craigslist.org/00w0w_6KXuyx6KeKX_600x450.jpg|http://images.craigslist.org/00W0W_jcGjuXczqhA_600x450.jpg|http://images.craigslist.org/00I0I_7LXUsnMGi4W_600x450.jpg|http://images.craigslist.org/01111_iXShZBTAytI_600x450.jpg|http://images.craigslist.org/01111_aMVafryaiLN_600x450.jpg|http://images.craigslist.org/00s0s_dRRfCxZOj8W_600x450.jpg|http://images.craigslist.org/00u0u_bHKHDQGePCg_600x450.jpg'
+p258
+aS'http://images.craigslist.org/00I0I_dorY0tQbgPg_600x450.jpg|http://images.craigslist.org/00606_j9p2IYLDLiR_600x450.jpg|http://images.craigslist.org/00w0w_dhWMeOQ7Mzx_600x450.jpg|http://images.craigslist.org/00V0V_iU5yIqIoOpD_600x450.jpg|http://images.craigslist.org/00C0C_cPG6KH0Cotu_600x450.jpg|http://images.craigslist.org/01515_ckIQisVETF5_600x450.jpg'
+p259
+aS''
+aS'http://images.craigslist.org/00K0K_dDa8nS4RrvP_600x450.jpg|http://images.craigslist.org/00J0J_lAC5YXWCqQz_600x450.jpg'
+p260
+aS'http://images.craigslist.org/01717_cpLHMPuOTNI_600x450.jpg|http://images.craigslist.org/00S0S_3R6HKgtMrbW_600x450.jpg|http://images.craigslist.org/00S0S_bJvvk3IKPEA_600x450.jpg'
+p261
+aS'http://images.craigslist.org/00n0n_ahEYc1Bvpta_600x450.jpg|http://images.craigslist.org/00303_2ehLAtmiKfI_600x450.jpg|http://images.craigslist.org/00606_jlVhdN0cA16_600x450.jpg|http://images.craigslist.org/00w0w_frvjIaRciV3_600x450.jpg|http://images.craigslist.org/00A0A_jOf9KLbjt94_600x450.jpg|http://images.craigslist.org/00909_clQ0SZRaIML_600x450.jpg|http://images.craigslist.org/00X0X_dolTUNvRuF5_600x450.jpg'
+p262
+aS'http://images.craigslist.org/00K0K_cenkJItUKin_600x450.jpg|http://images.craigslist.org/00505_bG6v8WImoDJ_600x450.jpg|http://images.craigslist.org/00E0E_2lFZ5N43Gg7_600x450.jpg|http://images.craigslist.org/00l0l_bxd1SGuDA3W_600x450.jpg'
+p263
+aS'http://images.craigslist.org/00K0K_cenkJItUKin_600x450.jpg|http://images.craigslist.org/00505_bG6v8WImoDJ_600x450.jpg|http://images.craigslist.org/00E0E_2lFZ5N43Gg7_600x450.jpg|http://images.craigslist.org/00l0l_bxd1SGuDA3W_600x450.jpg'
+p264
+aS'http://images.craigslist.org/00K0K_cenkJItUKin_600x450.jpg|http://images.craigslist.org/00505_bG6v8WImoDJ_600x450.jpg|http://images.craigslist.org/00E0E_2lFZ5N43Gg7_600x450.jpg|http://images.craigslist.org/00l0l_bxd1SGuDA3W_600x450.jpg'
+p265
+aS'http://images.craigslist.org/00k0k_lFzji0tQtQ6_600x450.jpg'
+p266
+aS'http://images.craigslist.org/00k0k_lFzji0tQtQ6_600x450.jpg'
+p267
+aS'http://images.craigslist.org/00k0k_8Q4U2pxzNQZ_600x450.jpg'
+p268
+aS''
+aS''
+aS'http://images.craigslist.org/00e0e_ajwaRldJj6_600x450.jpg|http://images.craigslist.org/01010_jsC15Brimmn_600x450.jpg|http://images.craigslist.org/01616_dNOGrmYpqcy_600x450.jpg|http://images.craigslist.org/00N0N_1vaZoYo0mZB_600x450.jpg|http://images.craigslist.org/00e0e_d0UKtH5ALeE_600x450.jpg'
+p269
+aS''
+aS''
+aS'http://images.craigslist.org/01010_1uK0BFdM0xb_600x450.jpg'
+p270
+aS'http://images.craigslist.org/00k0k_7U2AVbRqIh7_600x450.jpg|http://images.craigslist.org/00R0R_jFxPhnBb6sH_600x450.jpg'
+p271
+aS'http://images.craigslist.org/00r0r_5H9u0veNurf_600x450.jpg|http://images.craigslist.org/00m0m_efaGSOYhEF4_600x450.jpg|http://images.craigslist.org/00C0C_14FLvRXaIKz_600x450.jpg'
+p272
+aS'http://images.craigslist.org/01212_6IVkbAfe455_600x450.jpg|http://images.craigslist.org/00C0C_1czL5SSVaU1_600x450.jpg'
+p273
+atbag8
+(g42
+(I0
+tS'b'
+tRp274
+(I1
+(I1
+I32
+tg40
+I00
+S'\x03\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00'
+tbag8
+(g42
+(I0
+tS'b'
+tRp275
+(I1
+(I7
+I32
+tg12
+I00
+(lp276
+VUSA-NYM-MAN
+p277
+aVUSA-NYM-MAN
+p278
+aVUSA-NYM-MAN
+p279
+aVUSA-NYM-MAN
+p280
+aVUSA-NYM-MAN
+p281
+aVUSA-NYM-SEO
+p282
+aVUSA-NYM-SEO
+p283
+aVUSA-NYM-QUE
+p284
+aVUSA-NYM-MAN
+p285
+aVUSA-NYM-QUE
+p286
+aVUSA-NYM-MAN
+p287
+aVUSA-NYM-DEN
+p288
+aVUSA-NYM-BOO
+p289
+aVUSA-NYM-QUE
+p290
+aVUSA-NYM-MAN
+p291
+aVUSA-NYM-QUE
+p292
+aVUSA-NYM-NBR
+p293
+aVUSA-NYM-QUE
+p294
+aVUSA-NYM-QUE
+p295
+aVUSA-NYM-QUE
+p296
+aVUSA-NYM-MAN
+p297
+aVUSA-NYM-BRO
+p298
+aVUSA-NYM-BRO
+p299
+aVUSA-NYM-QUE
+p300
+aVUSA-NYM-WHA
+p301
+aVUSA-NYM-QUE
+p302
+aVUSA-NYM-QUE
+p303
+aVUSA-NYM-QUE
+p304
+aVUSA-NYM-EDI
+p305
+aVUSA-NYM-TOT
+p306
+aVUSA-NYM-TOT
+p307
+aVUSA-NYM-MAN
+p308
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-WTA', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10014', u'long': u'-74.0054', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.7339', u'accuracy': 8}"
+p309
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-WTA', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10014', u'long': u'-74.0054', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.7339', u'accuracy': 8}"
+p310
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-WTA', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10014', u'long': u'-74.0054', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.7339', u'accuracy': 8}"
+p311
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-WTA', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10014', u'long': u'-74.0054', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.7339', u'accuracy': 8}"
+p312
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-WTA', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10014', u'long': u'-74.0054', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.7339', u'accuracy': 8}"
+p313
+aS"{u'city': u'USA-NYM-SEO', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-06484', u'long': u'-73.09316', u'county': u'USA-CT-FAI', u'state': u'USA-CT', u'lat': u'41.31649', u'formatted_address': u'Shelton, CT, USA', u'accuracy': 7}"
+p314
+aS"{u'city': u'USA-NYM-SEO', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-06484', u'long': u'-73.09316', u'county': u'USA-CT-FAI', u'state': u'USA-CT', u'lat': u'41.31649', u'formatted_address': u'Shelton, CT, USA', u'accuracy': 7}"
+p315
+aS"{u'city': u'USA-NYM-AST', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-ASO', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11106', u'long': u'-73.9295', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.7608', u'accuracy': 8}"
+p316
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 0, u'metro': u'USA-NYM', u'locality': u'USA-NYM-TRI', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10007', u'long': u'-74.005973', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.714353', u'formatted_address': u'Queens, Flushing', u'accuracy': 8}"
+p317
+aS"{u'city': u'USA-NYM-FRS', u'geolocation_status': 0, u'metro': u'USA-NYM', u'locality': u'USA-NYM-UTO', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11366', u'long': u'-73.794852', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.728224', u'formatted_address': u'Queens, Flushing', u'accuracy': 8}"
+p318
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-TRI', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10013', u'long': u'-74.0025', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.7185', u'accuracy': 8}"
+p319
+aS"{u'city': u'USA-NYM-DEN', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-07834', u'long': u'-74.4844', u'county': u'USA-NJ-MOR', u'state': u'USA-NJ', u'lat': u'40.8897', u'accuracy': 8}"
+p320
+aS"{u'city': u'USA-NYM-BOO', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-07005', u'long': u'-74.40874', u'county': u'USA-NJ-MOR', u'state': u'USA-NJ', u'lat': u'40.90402', u'formatted_address': u'Boonton, NJ, USA', u'accuracy': 7}"
+p321
+aS"{u'city': u'USA-NYM-FRS', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-UTO', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11366', u'long': u'-73.7949', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.7272', u'accuracy': 8}"
+p322
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-UPW', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10025', u'long': u'-73.9683', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.7975', u'accuracy': 8}"
+p323
+aS"{u'city': u'USA-NYM-FRS', u'geolocation_status': 5, u'metro': u'USA-NYM', u'locality': u'USA-NYM-UTO', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11366', u'long': u'-73.79485', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.72822', u'formatted_address': u'Queens, NY, USA', u'accuracy': 7}"
+p324
+aS"{u'city': u'USA-NYM-NBR', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-08901', u'long': u'-74.45626', u'county': u'USA-NJ-MID', u'state': u'USA-NJ', u'lat': u'40.49852', u'formatted_address': u'Central Avenue, New Brunswick, NJ 08901, USA', u'accuracy': 8}"
+p325
+aS"{u'city': u'USA-NYM-FLU', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-NKE', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11367', u'long': u'-73.82499', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.74034', u'formatted_address': u'Main Street, Flushing, NY, USA', u'accuracy': 7}"
+p326
+aS"{u'city': u'USA-NYM-FLU', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-NKE', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11367', u'long': u'-73.82499', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.74034', u'formatted_address': u'Main Street, Flushing, NY, USA', u'accuracy': 7}"
+p327
+aS"{u'city': u'USA-NYM-FLU', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-NKE', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11367', u'long': u'-73.82499', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.74034', u'formatted_address': u'Main Street, Flushing, NY, USA', u'accuracy': 7}"
+p328
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-GRM', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10003', u'long': u'-73.99108', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.73586', u'formatted_address': u'Union Square, New York, NY, USA', u'accuracy': 7}"
+p329
+aS"{u'city': u'USA-NYM-BRL', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-WIU', u'country': u'USA', u'region': u'USA-NYM-BRO', u'zipcode': u'USA-11206', u'long': u'-73.9436', u'county': u'USA-NY-KIN', u'state': u'USA-NY', u'lat': u'40.7012', u'accuracy': 8}"
+p330
+aS"{u'city': u'USA-NYM-BRL', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-BUH', u'country': u'USA', u'region': u'USA-NYM-BRO', u'zipcode': u'USA-11221', u'long': u'-73.92129', u'county': u'USA-NY-KIN', u'state': u'USA-NY', u'lat': u'40.69443', u'formatted_address': u'Bushwick, Brooklyn, NY, USA', u'accuracy': 7}"
+p331
+aS"{u'city': u'USA-NYM-AST', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-ASO', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11106', u'long': u'-73.9295', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.7608', u'accuracy': 8}"
+p332
+aS"{u'city': u'USA-NYM-WHA', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-07885', u'long': u'-74.5863', u'county': u'USA-NJ-MOR', u'state': u'USA-NJ', u'lat': u'40.9139', u'accuracy': 8}"
+p333
+aS"{u'city': u'USA-NYM-AST', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11105', u'long': u'-73.911', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.7763', u'accuracy': 8}"
+p334
+aS"{u'city': u'USA-NYM-AST', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11105', u'long': u'-73.911', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.7763', u'accuracy': 8}"
+p335
+aS"{u'city': u'USA-NYM-AST', u'geolocation_status': 3, u'metro': u'USA-NYM', u'locality': u'USA-NYM-ASO', u'country': u'USA', u'region': u'USA-NYM-QUE', u'zipcode': u'USA-11106', u'long': u'-73.9295', u'county': u'USA-NY-QUE', u'state': u'USA-NY', u'lat': u'40.7608', u'accuracy': 8}"
+p336
+aS"{u'city': u'USA-NYM-EDI', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-08817', u'long': u'-74.41025', u'county': u'USA-NJ-MID', u'state': u'USA-NJ', u'lat': u'40.51822', u'formatted_address': u'Central Avenue, Edison, NJ 08817, USA', u'accuracy': 8}"
+p337
+aS"{u'city': u'USA-NYM-TOT', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-07512', u'long': u'-74.2168', u'county': u'USA-NJ-PAS', u'state': u'USA-NJ', u'lat': u'40.9048', u'accuracy': 8}"
+p338
+aS"{u'city': u'USA-NYM-TOT', u'geolocation_status': 3, u'metro': u'USA-NYM', u'country': u'USA', u'zipcode': u'USA-07512', u'long': u'-74.2168', u'county': u'USA-NJ-PAS', u'state': u'USA-NJ', u'lat': u'40.9048', u'accuracy': 8}"
+p339
+aS"{u'city': u'USA-NYM-NEY', u'geolocation_status': 5, u'metro': u'USA-NYM', u'locality': u'USA-NYM-UPE', u'country': u'USA', u'region': u'USA-NYM-MAN', u'zipcode': u'USA-10021', u'long': u'-73.95656', u'county': u'USA-NY-NEW', u'state': u'USA-NY', u'lat': u'40.77356', u'formatted_address': u'Upper East Side, New York, NY, USA', u'accuracy': 7}"
+p340
+aVUSA-NYM
+p341
+aVUSA-NYM
+p342
+aVUSA-NYM
+p343
+aVUSA-NYM
+p344
+aVUSA-NYM
+p345
+aVUSA-NYM
+p346
+aVUSA-NYM
+p347
+aVUSA-NYM
+p348
+aVUSA-NYM
+p349
+aVUSA-NYM
+p350
+aVUSA-NYM
+p351
+aVUSA-NYM
+p352
+aVUSA-NYM
+p353
+aVUSA-NYM
+p354
+aVUSA-NYM
+p355
+aVUSA-NYM
+p356
+aVUSA-NYM
+p357
+aVUSA-NYM
+p358
+aVUSA-NYM
+p359
+aVUSA-NYM
+p360
+aVUSA-NYM
+p361
+aVUSA-NYM
+p362
+aVUSA-NYM
+p363
+aVUSA-NYM
+p364
+aVUSA-NYM
+p365
+aVUSA-NYM
+p366
+aVUSA-NYM
+p367
+aVUSA-NYM
+p368
+aVUSA-NYM
+p369
+aVUSA-NYM
+p370
+aVUSA-NYM
+p371
+aVUSA-NYM
+p372
+aV2gb
+p373
+ag46
+aV8gb
+p374
+aV4gb
+p375
+aV2gb
+p376
+aV4gb
+p377
+aV4gb
+p378
+aV4gb
+p379
+aV4 gb
+p380
+aV4 gb
+p381
+aV4gb
+p382
+aV4gb
+p383
+aV4gb
+p384
+aV4gb
+p385
+ag46
+aV4gb
+p386
+aV4gb
+p387
+aV2gb
+p388
+aV2gb
+p389
+aV2gb
+p390
+aV4gb
+p391
+aV4gb
+p392
+aV4gb
+p393
+aV4gb
+p394
+aV4gb
+p395
+aV4gb
+p396
+ag46
+aV4gb
+p397
+aV4gb
+p398
+aV4gb
+p399
+aV2gb
+p400
+aV2gb
+p401
+ag46
+ag46
+ag46
+ag46
+aS'firm'
+p402
+ag402
+ag402
+ag46
+ag46
+ag46
+ag46
+ag46
+ag46
+ag46
+ag46
+ag46
+ag402
+ag46
+ag46
+ag46
+aS'obo'
+p403
+ag403
+ag403
+ag46
+ag46
+ag46
+ag46
+ag46
+ag402
+ag46
+ag46
+ag46
+aNaNaNaNaNaNaNaV9175439949
+p404
+aNaNaNaNaNaV7329866264
+p405
+aV9176598428
+p406
+aV6464749462
+p407
+aNaV9173417342
+p408
+aV9173417342
+p409
+aV9173417342
+p410
+aV9177444894
+p411
+aV9177444894
+p412
+aV9177444894
+p413
+aV9175439949
+p414
+aNaNaV9175439949
+p415
+aV9175439949
+p416
+aNaNaNaNaS'2014-07-09 20:44:06'
+p417
+aS'2014-07-09 20:43:50'
+p418
+aS'2014-07-09 20:41:06'
+p419
+aS'2014-07-09 20:39:19'
+p420
+aS'2014-07-09 20:37:37'
+p421
+aS'2014-07-09 19:42:54'
+p422
+aS'2014-07-09 19:42:48'
+p423
+aS'2014-07-09 14:04:36'
+p424
+aS'2014-07-09 13:56:00'
+p425
+aS'2014-07-09 13:56:00'
+p426
+aS'2014-07-09 10:06:01'
+p427
+aS'2014-07-09 09:28:22'
+p428
+aS'2014-07-09 09:27:45'
+p429
+aS'2014-07-09 08:53:16'
+p430
+aS'2014-07-09 08:08:29'
+p431
+aS'2014-07-09 07:02:13'
+p432
+aS'2014-07-09 05:54:17'
+p433
+aS'2014-07-08 19:14:59'
+p434
+aS'2014-07-08 19:14:53'
+p435
+aS'2014-07-08 19:14:46'
+p436
+aS'2014-07-08 18:36:50'
+p437
+aS'2014-07-08 18:34:40'
+p438
+aS'2014-07-08 18:32:26'
+p439
+aS'2014-07-08 18:02:52'
+p440
+aS'2014-07-08 16:23:29'
+p441
+aS'2014-07-08 12:07:41'
+p442
+aS'2014-07-08 12:02:02'
+p443
+aS'2014-07-08 07:07:57'
+p444
+aS'2014-07-08 01:15:22'
+p445
+aS'2014-07-07 21:50:55'
+p446
+aS'2014-07-07 21:49:55'
+p447
+aS'2014-07-07 21:17:54'
+p448
+atbag8
+(g42
+(I0
+tS'b'
+tRp449
+(I1
+(I1
+I32
+tg11
+(S'f8'
+I0
+I1
+tRp450
+(I3
+S'<'
+NNNI-1
+I-1
+I0
+tbI00
+S'\x00\x00\x00\x00\x00\xc0\x82@\x00\x00\x00\x00\x00\x00$@\x00\x00\x00\x00\x00\x18\x95@\x00\x00\x00\x00\x00\x90\x8a@\x00\x00\x00\x00\x00\xc0r@\x00\x00\x00\x00\x00\x90\x8a@\x00\x00\x00\x00\x00\x90\x8a@\x00\x00\x00\x00\x00h\x87@\x00\x00\x00\x00\x00\xc0\x8c@\x00\x00\x00\x00\x00\xc0\x8c@\x00\x00\x00\x00\x00\xd0\x86@\x00\x00\x00\x00\x00x\x89@\x00\x00\x00\x00\x00H\x88@\x00\x00\x00\x00\x00pw@\x00\x00\x00\x00\x000\x7f@\x00\x00\x00\x00\x00\x80\x86@\x00\x00\x00\x00\x00\xf0\x89@\x00\x00\x00\x00\x000\x81@\x00\x00\x00\x00\x000\x81@\x00\x00\x00\x00\x00\xf8\x81@\x00\x00\x00\x00\x00\x00\x89@\x00\x00\x00\x00\x00\x00\x89@\x00\x00\x00\x00\x00\x00\x89@\x00\x00\x00\x00\x00h\x87@\x00\x00\x00\x00\x00\x90\x8a@\x00\x00\x00\x00\x00\x10\x88@\x00\x00\x00\x00\x00h\x87@\x00\x00\x00\x00\x00h\x87@\x00\x00\x00\x00\x00\x80\x86@\x00\x00\x00\x00\x00p\x87@\x00\x00\x00\x00\x00P\x84@\x00\x00\x00\x00\x00 |@'
+tbag8
+(g42
+(I0
+tS'b'
+tRp451
+(I1
+(I3
+I32
+tg75
+I00
+S'\x00\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x01\x01\x01\x00\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x01\x00\x00\x01\x00\x00\x00\x00'
+tbag8
+(g42
+(I0
+tS'b'
+tRp452
+(I1
+(I1
+I32
+tg12
+I00
+(lp453
+S'http://newyork.craigslist.org/mnh/sys/4541409662.html'
+p454
+aS'http://newyork.craigslist.org/mnh/sys/4555008117.html'
+p455
+aS'http://newyork.craigslist.org/mnh/sys/4547304812.html'
+p456
+aS'http://newyork.craigslist.org/mnh/sys/4541401234.html'
+p457
+aS'http://newyork.craigslist.org/mnh/sys/4526660620.html'
+p458
+aS'http://newhaven.craigslist.org/sys/4532624670.html'
+p459
+aS'http://newyork.craigslist.org/fct/sys/4544238145.html'
+p460
+aS'http://newyork.craigslist.org/que/sys/4557141313.html'
+p461
+aS'http://newyork.backpage.com/ElectronicsForSale/920-new-macbook-air-133-screen-md760llb-latest-model/50509766'
+p462
+aS'http://queens.backpage.com/ElectronicsForSale/920-new-macbook-air-133-screen-md760llb-latest-model/50509766'
+p463
+aS'http://newyork.craigslist.org/mnh/sys/4560513870.html'
+p464
+aS'http://newjersey.craigslist.org/sys/4533612598.html'
+p465
+aS'http://newjersey.craigslist.org/sys/4550306308.html'
+p466
+aS'http://newyork.craigslist.org/que/sys/4560362391.html'
+p467
+aS'http://newyork.craigslist.org/mnh/sys/4560274230.html'
+p468
+aS'http://newyork.craigslist.org/que/sys/4534618992.html'
+p469
+aS'http://cnj.craigslist.org/sys/4560070931.html'
+p470
+aS'http://newyork.craigslist.org/que/clt/4532493596.html'
+p471
+aS'http://newyork.craigslist.org/que/clt/4532494898.html'
+p472
+aS'http://newyork.craigslist.org/que/clt/4522961264.html'
+p473
+aS'http://newyork.craigslist.org/mnh/sys/4559654361.html'
+p474
+aS'http://newyork.craigslist.org/que/sys/4559651436.html'
+p475
+aS'http://newyork.craigslist.org/brk/sys/4555312749.html'
+p476
+aS'http://newyork.craigslist.org/que/sys/4544748624.html'
+p477
+aS'http://newjersey.craigslist.org/sys/4550895285.html'
+p478
+aS'http://newyork.craigslist.org/que/sys/4555457487.html'
+p479
+aS'http://newyork.craigslist.org/que/sys/4543934449.html'
+p480
+aS'http://newyork.craigslist.org/que/sys/4550534368.html'
+p481
+aS'http://cnj.craigslist.org/sys/4558163423.html'
+p482
+aS'http://newjersey.craigslist.org/sys/4544143320.html'
+p483
+aS'http://newjersey.craigslist.org/sys/4544121898.html'
+p484
+aS'http://newyork.craigslist.org/mnh/sys/4558044417.html'
+p485
+atbag8
+(g42
+(I0
+tS'b'
+tRp486
+(I1
+(I1
+I32
+tg12
+I00
+(lp487
+I2011
+aI2011
+aI2014
+aI2014
+aI2010
+aI2014
+aI2014
+aI2011
+aI2014
+aI2014
+ag46
+aI2011
+aI2011
+aI2010
+aI2011
+aI2013
+aI2013
+ag46
+ag46
+aI2014
+aI2014
+aI2014
+aI2014
+aI2011
+aI2011
+aI2013
+aI2011
+aI2011
+aI2012
+ag46
+ag46
+aI2011
+atba(lp488
+g8
+(g9
+(I0
+tS'b'
+tRp489
+((I1
+(I1
+tg12
+I00
+(lp490
+g14
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp491
+((I1
+(I1
+tg12
+I00
+(lp492
+g15
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp493
+((I1
+(I3
+tg12
+I00
+(lp494
+g16
+ag17
+ag18
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp495
+((I1
+(I1
+tg12
+I00
+(lp496
+g19
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp497
+((I1
+(I4
+tg12
+I00
+(lp498
+g20
+ag21
+ag22
+ag23
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp499
+((I1
+(I1
+tg12
+I00
+(lp500
+g24
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp501
+((I1
+(I7
+tg12
+I00
+(lp502
+g25
+ag26
+ag27
+ag28
+ag29
+ag30
+ag31
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp503
+((I1
+(I1
+tg12
+I00
+(lp504
+g32
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp505
+((I1
+(I3
+tg12
+I00
+(lp506
+g33
+ag34
+ag35
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp507
+((I1
+(I1
+tg12
+I00
+(lp508
+g36
+at(Nttbag8
+(g9
+(I0
+tS'b'
+tRp509
+((I1
+(I1
+tg12
+I00
+(lp510
+g37
+at(Nttbatbb.

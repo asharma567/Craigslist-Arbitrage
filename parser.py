@@ -1,4 +1,11 @@
+
 import pandas as pd
+import datetime
+from utils import f_get
+from utils import pickle_this
+from utils import re_search
+from model_dict import features_by_year
+
 
 def c_list_parser(postings, query_execution_time):
     
@@ -7,7 +14,7 @@ def c_list_parser(postings, query_execution_time):
     f_conv_date          		= lambda x: datetime.datetime.fromtimestamp(int(x)).strftime('%Y-%m-%d %H:%M:%S')
     f_make_images_string 		= lambda x: str('|'.join([item['full'].decode('utf8') for item in x]))
     f_find_year          		= lambda x: re_search(r'\b(200[0-9]|201[0-4])\b', x)
-    f_find_year_by_words 		= lambda x: re_search(r'brand new|sealed|latest|unopened|like new',x.lower())
+    f_find_year_by_words 		= lambda x: re_search(r'brand new|sealed|latest|unopened',x.lower())
     f_negotiability_obo  		= lambda x: re_search(r'\bobo|best offer',x.lower())
     f_negotiability_firm 		= lambda x: re_search(r'\bfirm',x.lower())
     f_base_or_upgrade    		= lambda x,y: bool (re_search(y,x.lower()))
@@ -36,11 +43,11 @@ def c_list_parser(postings, query_execution_time):
             year = int(f_find_year(str_heading_body))
         else:
             # if we can't find the year in the string, 
-            # then we resort to looking for keywords and defualt to the latest year
+            # look for keywords and defualt to the latest year
             if f_find_year_by_words(str_heading_body): 
                 year = datetime.datetime.now().year
             else:
-                year = 'NaN'
+                year = None
                 
         #Condition
         condition = f_get(dic, 'annotations','condition')
@@ -63,16 +70,7 @@ def c_list_parser(postings, query_execution_time):
             else:
                 loc       = None
                 loc_metro = f_get(dic, 'location','metro')
-#         try:
-#             loc             = dic['location']['region']
-#             loc_metro       = dic['location']['region'][:7]
-#         except:
-#             try:
-#                 loc             = dic['location']['city']
-#                 loc_metro       = dic['location']['city'][:7]
-#             except:
-#                 loc             = 'NaN'
-#                 loc_metro       = dic['location']['metro']
+
 
         #Standard stuff
         heading         = str(dic['heading'])
@@ -104,7 +102,10 @@ def c_list_parser(postings, query_execution_time):
         if not year and not cpu and not memory and not HD: continue
         
         #just for handling the data later
-        if not year: year = 'NaN' 
+        if not year: year = 'NaN'
+        if not cpu: cpu = 'NaN'
+        if not memory: memory = 'NaN'
+        if not HD: HD = 'NaN'
         ## do this with other features
         
         df_row = pd.DataFrame({

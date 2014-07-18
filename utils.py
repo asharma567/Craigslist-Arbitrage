@@ -1,5 +1,6 @@
 import cPickle
 import re
+import datetime
 
 def re_search(regex, string):
     if not regex: return None
@@ -16,15 +17,32 @@ def f_get(dic, key1, key2):
 
 # Pickle DataFrame as extra backup
 def pickle_this(name, df):
+    query_exec_time = datetime.datetime.now()
     cPickle.dump(df, open(name + '_' + query_exec_time.strftime('%m-%d-%y') + '.pkl', "w"))
 
-# Save a DF to SQL table
-def f_df_save(df, table_name, sql_option='append'):
-    #get the original table name if possible
-    if not table_name:
-        table_name = str(df) 
-    #Save them somewhere: User should be given option here
-    pickle_this(table_name, df)
+#removal methods:
+def remove_all_same_features(input_df):
+    df = input_df[:]
+    df['all_features'] = df['cpu_speed']+\
+                            df['HD_size']+\
+                            df['memory']+\
+                            df['year']+\
+                            str(df['px'])+\
+                            df['apple_care']+\
+                            df['upgraded_HD']+\
+                            df['upgraded_cpu']+\
+                            df['upgraded_memory']
+    return remove_duplicates(df,'all_features')
 
-    #Create the SQL table and the schema if it's the initial run. Yes, I know - amazing.
-    df.to_sql(table_name, engine, if_exists=sql_option)
+ 
+def remove_duplicates(input_df,column_name):
+    df = input_df[:]
+    df = df.drop_duplicates(cols=column_name, take_last=True)
+    df.sort_index(inplace=True)
+    df = df.reset_index()
+    return df
+
+def preprocess_from_df(X,y):
+    y = df['px'].ravel()
+    X = np.array(df['year'].astype(int))
+    X = X.reshape((X.shape[0],1))
