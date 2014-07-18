@@ -1,6 +1,11 @@
 import cPickle
 import re
 import datetime
+from sklearn import cross_validation
+import matplotlib.pyplot as plt
+import seaborn as sns
+import requests
+
 
 def re_search(regex, string):
     if not regex: return None
@@ -19,6 +24,9 @@ def f_get(dic, key1, key2):
 def pickle_this(name, df):
     query_exec_time = datetime.datetime.now()
     cPickle.dump(df, open(name + '_' + query_exec_time.strftime('%m-%d-%y') + '.pkl', "w"))
+
+hello = 5
+bye = 7
 
 #removal methods:
 def remove_all_same_features(input_df):
@@ -60,6 +68,9 @@ def model_score(model, X, y):
 def print_links(df,arg_indices, top_n):
     print 'rank\tindex\tlink'
     for i, link in enumerate(df.iloc[arg_indices]['url_to_post'][:top_n]):
+        if requests.get().response.status == 200:
+            requests.get()
+
         print i , '\t' ,  link 
 
 def make_unicode(s):
@@ -94,3 +105,19 @@ def plot_pricevsyear(df,model=None):
         plt.plot(years, prediction,'b--',alpha=0.5)
     
     plt.show()
+
+#clustering among top deals
+def find_indices(y_hat,y):
+    #fix for year
+    delta = y - y_hat
+    # now how do I impose some threshold say: 2*stds from mean
+    indices = np.argsort(delta)
+    return indices
+
+def check_if_removed(link):
+    checker = lambda x: bool(re.search(r'will be removed in just a few minutes', x))
+    r = requests.get(link)
+    if r.status_code == 200:
+        if checker(r.text): return True
+    return False
+

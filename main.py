@@ -1,17 +1,23 @@
 from scraper import get_training_data
+from scraper import get_postings
+import pprint
+import json
 
 
 def main():
+	for i in get_postings(0, '*'):
+		print json.dumps(i,indent=4, sort_keys=True)
+		
     #call scraper and parser
     #Tristate Trian Data
-	metro = '*'
-	print metro
-	get_training_data(0,metro,False)
-	#get_training_data(1,metro,True)
+	# metro = '*'
+	# print metro
+	# get_training_data(0,metro,False)
+	# #get_training_data(1,metro,True)
 	#get_training_data(2,metro,True)
 	#get_training_data(3,metro,True)
 	#Reading the scraped and munged data from SQL
-	NY_df = pd.read_sql_table('training' + metro + '_df', engine)
+	# NY_df = pd.read_sql_table('training' + metro + '_df', engine)
 
 	#interesting -- seems like the subset of people that 
 	# print NY_df[NY_df['negotiability'] == 'firm']['px'].mean()
