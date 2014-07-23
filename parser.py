@@ -7,33 +7,31 @@ from utils import pickle_this
 from utils import re_search
 from model_dict import features_by_year
 
+#thinking about what to do with all these
+f_conv_date                 = lambda x: datetime.datetime.fromtimestamp(int(x)).strftime('%Y-%m-%d %H:%M:%S')
+f_make_images_string        = lambda x: str('|'.join([item['full'].decode('utf8') for item in x]))
+f_find_year                 = lambda x: re_search(r'\b(200[8-9]|201[0-4])\b', x)
+f_find_year_by_words        = lambda x: re_search(r'brand new|sealed|latest|unopened',x.lower())
+f_negotiability_obo         = lambda x: re_search(r'\bobo|best offer',x.lower())
+f_negotiability_firm        = lambda x: re_search(r'\bfirm',x.lower())
+f_base_or_upgrade           = lambda x,y: bool (re_search(y,x.lower()))
+f_find_apple_care           = lambda x: bool(re_search(r'apple warranty|applecare|apple care|warranty',x.lower()))
+
+f_find_cpu                  = lambda x: re_search(r'1\.6|1\.8|1\.86|2\.13|2\.1|2\.0|1\.3|1\.7|1\.4', x)
+f_find_memory               = lambda x: re_search(r'\b2 gb\b|\b2gb\b|\b4 gb\b|\b4gb\b|\b8 gb\b|\b8gb\b', x)
+f_find_HD                   = lambda x: re_search(r'250|256|516|128|80|64|120', x)
+f_take_out_words            = lambda x: re.sub(r'office 200[0-9]|office 201[0-9]|battery|charger|brand new os', '',x.lower())
 
 def c_list_parser(postings, query_execution_time):
     
-   
-	#thinking about what to do with all these
-    f_conv_date          		= lambda x: datetime.datetime.fromtimestamp(int(x)).strftime('%Y-%m-%d %H:%M:%S')
-    f_make_images_string 		= lambda x: str('|'.join([item['full'].decode('utf8') for item in x]))
-    f_find_year          		= lambda x: re_search(r'\b(200[0-9]|201[0-4])\b', x)
-    f_find_year_by_words 		= lambda x: re_search(r'brand new|sealed|latest|unopened',x.lower())
-    f_negotiability_obo  		= lambda x: re_search(r'\bobo|best offer',x.lower())
-    f_negotiability_firm 		= lambda x: re_search(r'\bfirm',x.lower())
-    f_base_or_upgrade    		= lambda x,y: bool (re_search(y,x.lower()))
-    f_find_apple_care    		= lambda x: bool(re_search(r'apple warranty|applecare|apple care|warranty',x.lower()))
-    
-    
-    f_find_cpu           		= lambda x: re_search(r'1\.6|1\.8|1\.86|2\.13|2\.1|2\.0|1\.3|1\.7|1\.4', x)
-    f_find_memory        		= lambda x: re_search(r'\b2 gb\b|\b2gb\b|\b4 gb\b|\b4gb\b|\b8 gb\b|\b8gb\b', x)
-    f_find_HD            		= lambda x: re_search(r'250|256|516|128|80|64|120', x)
-    f_take_out_office           = lambda x: re.sub(r'office 200[0-9]|office 201[0-9]', '',x.lower())
-    
+       
     df = pd.DataFrame()
 
     for dic in postings:
 
         str_heading_body = dic['heading'] + " | " + dic['body']
 
-        str_heading_body = f_take_out_office(str_heading_body)            
+        str_heading_body = f_take_out_words(str_heading_body)            
         #Parsing Negotiatiability
         negotiability = 'NaN'
         if f_negotiability_firm(str_heading_body): negotiability = 'firm'
@@ -47,6 +45,7 @@ def c_list_parser(postings, query_execution_time):
             # look for keywords and defualt to the latest year
             if f_find_year_by_words(str_heading_body): 
                 year = datetime.datetime.now().year
+                print str_heading_body
             else:
                 year = None
                 
@@ -87,6 +86,7 @@ def c_list_parser(postings, query_execution_time):
             upgraded_cpu = f_base_or_upgrade(str_heading_body, features_by_year[year]['processor_speeds']['high'])
             upgraded_memory = f_base_or_upgrade(str_heading_body, features_by_year[year]['memory']['high'])
             upgraded_HD = f_base_or_upgrade(str_heading_body, features_by_year[year]['HD']['high'])
+        
         else:
             upgraded_cpu = False
             upgraded_memory = False

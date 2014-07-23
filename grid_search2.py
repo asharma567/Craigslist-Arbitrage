@@ -1,3 +1,7 @@
+#Notes from mentor
+#bag of words, TF-IDF, NMF, LDA, , Kmeans, silhouette score .. iterate through Ks find highest score.
+#Decision Tree
+
 from utils import * 
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso
@@ -47,13 +51,11 @@ params_dict = {
 				   "Random Forest": RF_parameters
 			   }
 
-#bag of words, TF-IDF, NMF, LDA, , Kmeans, silhouette score .. iterate through Ks find highest score.
-#Decision Tree
 
 def routine(X,y, model,df,pxs):
 
 	
-	top_n_recs = 50
+	top_n_recs = 10
 	top_indices = find_indices(model.fit(X,y).predict(X),y)
 	df 	= df.iloc[top_indices][['heading', 'year', 'px']][:top_n_recs]
 	
@@ -62,15 +64,13 @@ def routine(X,y, model,df,pxs):
 
 	return max_price, average_spread
 
-def search_best_params(X,y,df):
-	#loop for model
-	# for model_name, model_obj in models.iteritems():
-	# 	print '-' * 15 + model_name +'-' * 15
+def search_best_params(X,y,df, pxs):
 	print '# of examples', len(X)
-	# for hyper_param_name in RF_parameters:
-	pxs = get_ebay_data()
+	
+	#MAXED api calls
+	# pxs = get_ebay_data()
 	bestavg = 0
-	print str(params_dict["Random Forest"].keys())
+	
 	for number_of_trees in params_dict["Random Forest"]['n_estimators']:
 		for crit in params_dict["Random Forest"]['criterion']:
 			for min_split in params_dict["Random Forest"]['min_samples_split']:
@@ -86,10 +86,15 @@ def search_best_params(X,y,df):
 					if avg > bestavg:
 						bestavg = avg
 						optimal_params = (number_of_trees, crit, min_split, boot, maxi, avg)
-	print optimal_params
+	
+	print 'n_estimators=', optimal_params[0], ', ', \
+			'criterion=', optimal_params[1], ', ', \
+			'min_samples_split=', optimal_params[2], ', ', \
+			'bootstrap=', optimal_params[3]
+	print 'Max - ',optimal_params[4],' Avg Spread -',optimal_params[5]
 	
 	bestavg = 0
-	print str(params_dict["SVR"].keys())
+	
 	for k in params_dict["SVR"]['kernel']:
 		for c in params_dict["SVR"]['C']:
 			for g in params_dict["SVR"]['gamma']:
@@ -106,7 +111,12 @@ def search_best_params(X,y,df):
 					if avg > bestavg:
 						bestavg = avg
 						optimal_params = (k, c, g, d, maxi, avg)
-	print optimal_params
+	
+	print 'kernel=', optimal_params[0], ', ', \
+			'C=', optimal_params[1], ', ', \
+			'gamma=', optimal_params[2], ', ', \
+			'degree=', optimal_params[3] 
+	print 'Max - ',optimal_params[4], ' Avg Spread -',optimal_params[5]
 
 	
 	bestavg = 0
@@ -126,23 +136,22 @@ def search_best_params(X,y,df):
 					if avg > bestavg:
 						bestavg = avg
 						optimal_params = (k, c, g, d, maxi, avg)
-	print params_dict["L1"].keys()
-	print optimal_params
-			#ask gio about the grid search
-			# for  
+	print 'alpha=', optimal_params[0], ', ', \
+			'tol=', optimal_params[1], ', ', \
+			'warm_start=', optimal_params[2], ', ', \
+			'positive=', optimal_params[3]
+	
+	print 'Max - ',optimal_params[4], ' Avg Spread -',optimal_params[5]
 
-		# for hyper_parameter_value in params_dict[model_name][hyper_param_name]:
-		# 	print hyper_param_name, hyper_parameter_value
-		# 	routine(X, y, model_obj(i))
 
-def grid_search_model(model,params): #send in the model eg LinearRegression()
+def grid_search_model(model,params):
+#send in the model eg LinearRegression() 
 	parameters = params
 	clf = GridSearchCV(model,params)
 	clf.fit(X,y)
 	return clf.best_estimator_
 
 
-# SVR_parameters = {'kernel':['rbf','linear'],'gamma':arange(0,4),'C':arange(0.1,9)}
 
 
 

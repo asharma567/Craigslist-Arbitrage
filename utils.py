@@ -5,7 +5,21 @@ from sklearn import cross_validation
 import matplotlib.pyplot as plt
 import seaborn as sns
 import requests
+import numpy as np
 
+PXS = {2008: (330.29, u'Macbook Air 13 2008', 57),
+ 2009: (341.33, u'Macbook Air 13 2009', 24),
+ 2010: (491.87, u'Macbook Air 13 2010', 58),
+ 2011: (590.11, u'Macbook Air 13 2011', 138),
+ 2012: (683.4, u'Macbook Air 13 2012', 121),
+ 2013: (823.18, u'Macbook Air 13 2013', 140),
+ 2014: (870.86, u'Macbook Air 13 2014', 7)}
+
+
+def negotiability_check(df):
+    print df['negotiability'].value_counts()
+    print 'OBO -', df[df['negotiability'] == 'obo']['px'].mean()
+    print 'Firm - ', df[df['negotiability'] == 'firm']['px'].mean()
 
 def re_search(regex, string):
     if not regex: return None
@@ -25,8 +39,6 @@ def pickle_this(name, df):
     query_exec_time = datetime.datetime.now()
     cPickle.dump(df, open(name + '_' + query_exec_time.strftime('%m-%d-%y') + '.pkl', "w"))
 
-hello = 5
-bye = 7
 
 #removal methods:
 def remove_all_same_features(input_df):
@@ -43,10 +55,11 @@ def remove_all_same_features(input_df):
     return remove_duplicates(df,'all_features')
 
 
-def preprocess_from_df(X,y):
-    y = df['px'].ravel()
-    X = np.array(df['year'].astype(int))
+def preprocess_from_df(dfX,dfy):
+    y = dfy.ravel()
+    X = np.array(dfX.astype(int))
     X = X.reshape((X.shape[0],1))
+    return X,y
 
 def remove_duplicates(input_df,column_name):
     df = input_df[:]
@@ -65,13 +78,21 @@ def remove_key_words(input_df,keyword):
 def model_score(model, X, y):
         return np.mean(cross_validation.cross_val_score(model, X, y, cv = 20))
 
-def print_links(df,arg_indices, top_n):
-    print 'rank\tindex\tlink'
-    for i, link in enumerate(df.iloc[arg_indices]['url_to_post'][:top_n]):
-        if requests.get().response.status == 200:
-            requests.get()
+def print_links(df, arg_indices, top_n):
+    # print 'rank\tindex\tlink'
+    links_to_be_shown = []
+    ctr = 0
 
-        print i , '\t' ,  link 
+    for i, link in enumerate(df.iloc[arg_indices]['url_to_post']):
+        if check_if_removed(link):
+            #recursive function maybe
+            #top_n - ctr
+            continue
+        ctr += 1
+        # print link
+        links_to_be_shown.append(str(link))
+        if ctr == top_n: break
+    return links_to_be_shown
 
 def make_unicode(s):
     return unicode(s, 'utf-8', errors='ignore')
@@ -86,16 +107,16 @@ def price_filtering(input_df, upper_bound, lower_bound):
     
     return input_df
 
-def plot_pricevsyear(df,model=None):
+def plot_pricevsyear(df, model=None, title=None):
     #Scatter
     fig, ax = plt.subplots()
     ax.scatter(df['year'], df['px'], alpha=0.5, color='orchid')
-    fig.suptitle('Year vs Price')
+    fig.suptitle(title)
 
     #could turn into def, df.columns
     ax.get_xaxis().get_major_formatter().set_useOffset(False)
-    ax.set_xlabel(r'$Year$',    fontsize=16)
-    ax.set_ylabel(r'$Price$',   fontsize=16)
+    ax.set_xlabel(r'$Year$', fontsize=16)
+    ax.set_ylabel(r'$Price$', fontsize=16)
     fig.tight_layout(pad=2)
     
     if model:
@@ -120,4 +141,29 @@ def check_if_removed(link):
     if r.status_code == 200:
         if checker(r.text): return True
     return False
+
+def get_ebay_data():
+    api = 'c8cabb30069fe1dd5ea187a03a7294ad'
+    url = 'http://api.bidvoy.net/article/analyse/'
+    ebay_data = {}
+
+    try:
+        for year in xrange(2008,2015):
+            resp = requests.get(url, params={'apikey': api, 'category': 111422, 'keyword': 'Macbook Air 13 ' + str(year)})
+            
+            ebay_data[year] = (float(resp.json()['data']['averagePrice']), 
+                                resp.json()['data']['keyword'], 
+                                int(resp.json()['data']['analyzedQuantity']))
+               
+    except TypeError:
+        print 'error with the API call'
+        print resp.json()
+            
+        ebay_data = PXS    
+    
+    return ebay_data
+
+def testing_samplepage(metro):
+    for i in get_postings(0, metro):
+        print json.dumps(i, indent= 4, sort_keys= True)
 

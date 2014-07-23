@@ -3,18 +3,18 @@ from scraper import get_postings
 import pprint
 import json
 
+# http://localhost:5353/dashboard?city=sdf
 
 def main():
-	for i in get_postings(0, '*'):
-		print json.dumps(i,indent=4, sort_keys=True)
-		
+
     #call scraper and parser
     #Tristate Trian Data
-	# metro = '*'
+	metro = 'USA-NYM'
 	# print metro
-	# get_training_data(0,metro,False)
-	# #get_training_data(1,metro,True)
-	#get_training_data(2,metro,True)
+	get_training_data(0, metro, False)
+	get_training_data(1, metro, True)
+
+	# get_training_data(2,metro,True)
 	#get_training_data(3,metro,True)
 	#Reading the scraped and munged data from SQL
 	# NY_df = pd.read_sql_table('training' + metro + '_df', engine)

@@ -49,7 +49,7 @@ def get_postings(tier_num, metro,pg_num_iterator = 0):
                                  'retvals': fields
                                  }
     
-    query_exec_time = datetime.datetime.now()
+    
     sample_page = client.search.search(params = tristate_macbookair13_params)
     print 'number of total matches: ', sample_page['num_matches']
     print '# of postings in sample page:', len(sample_page['postings'])
@@ -60,17 +60,17 @@ def get_postings(tier_num, metro,pg_num_iterator = 0):
     return sample_page['postings']
 
 
-def get_training_data(tier_num, metro,just_append_override=False):
+def get_training_data(tier_num, metro, just_append_override=False):
 
     first_run = True
     pg_num_iterator = 0
     
-
-    postings = get_postings(tier_num, metro,pg_num_iterator)
+    query_exec_time = datetime.datetime.now()
+    postings = get_postings(tier_num, metro, pg_num_iterator)
     while len(postings) > 0:
         
-        parse_results = c_list_parser(sample_page['postings'], query_exec_time)
-        
+        # parse_results = c_list_parser(sample_page['postings'], query_exec_time)
+        parse_results = c_list_parser(postings, query_exec_time)
         if just_append_override:
             f_df_save(parse_results,'training' + metro + '_df','append')
             print len(parse_results),'SAVED'
@@ -85,7 +85,9 @@ def get_training_data(tier_num, metro,just_append_override=False):
                 print len(parse_results),'SAVED'
         
         pg_num_iterator += 1
-        postings = get_postings(tier_num, metro)
+        postings = get_postings(tier_num, metro,pg_num_iterator)
+    
+    return None
 
 # Save a DF to SQL table
 def f_df_save(df, table_name, sql_option='append'):
@@ -97,4 +99,6 @@ def f_df_save(df, table_name, sql_option='append'):
 
     #Create the SQL table and the schema if it's the initial run. Yes, I know - amazing.
     df.to_sql(table_name, engine, if_exists=sql_option)
+
+
 
