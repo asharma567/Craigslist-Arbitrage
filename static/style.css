@@ -1,0 +1,58 @@
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+}
+
+#nav-box {
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 10px;
+    background-color: white;
+    opacity: 0.6;
+    filter: alpha(opacity= 60);
+    width: 300px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#nav-box:hover {
+  opacity: 1.0;
+  filter:alpha(opacity= 90);
+}
+
+#out-box {
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 150px;
+    background-color: white;
+    opacity: 0.6;
+    filter: alpha(opacity= 60);
+    width: 300px;
+    height: 600px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#out-box:hover {
+  opacity: 1.0;
+  filter:alpha(opacity= 90);
+}
+
+.symbol {
+  width: 10px;
+  height: 10px;
+  border: 6px solid #333;
+  border-radius: 5px;
+  background-color: rgba(204, 0, 102, 0);
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  font-size: 15px;
+  text-align: center;
+}

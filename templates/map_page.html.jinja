@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Google Maps Multiple Markers</title> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+</head> 
+<body>
+  <div id="map" style="width: 1000px; height: 1100px;"></div>
+
+  <script type="text/javascript">
+    var locations = {{ l }};
+    console.log(locations);
+   function toggleBounce(marker,currBouncing) {
+     if (marker.getAnimation() != null) {
+	    marker.setAnimation(null);
+	  } else {
+	    marker.setAnimation(google.maps.Animation.BOUNCE);
+	  }
+
+
+       if(currBouncing != null)
+                  marker.setAnimation(null);
+     }
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: new google.maps.LatLng(40.711329, -73.947076),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow(),
+        currBouncing  = null;
+    
+    
+    for (var i = 0; i < locations.length; i++) {  
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        
+      });
+
+  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+            infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+
+        }
+      })(marker, i));
+   /*
+      google.maps.event.addListener(marker, 'mouseout', function() {
+               marker.setAnimation(null);
+      });
+      
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          console.log('Marker ' + Object.keys(marker));
+          toggleBounce(marker,currBouncing);         
+          //update reference
+          currBouncing = marker;
+          console.log('Bouncing ' + Object.keys(currBouncing));
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+
+        }
+      })(marker, i)); */
+    } //end for
+    
+ 
+    
+
+
+  </script>
+</body>
+</html>
+
+#goto this webpage and DL template
+#file:///Users/Ajay/Downloads/edmin/index.html
+#work inductively about how to import table
+#https://#githubcom/mitsuhiko/flask/blob/master/examples/flaskr/static/style.css
+#search for module-body table... or inspect element of what I want to #look for 
+
+0     (40.711329, -73.947076)
+2         (40.7375, -73.9813)
+3         (40.6669, -73.9828)
+4     (40.727356, -73.984337)
+7       (40.71435, -74.00597)
+8         (40.7674, -74.0323)
+9         (40.7484, -73.9967)
+10      (40.71435, -74.00597)
+11        (40.8019, -73.9531)
+12        (40.6251, -74.0303)
+14      (40.75856, -73.76544)
+15        (40.7536, -73.8226)
+16     (40.751418, -73.97541)
+17        (40.9048, -74.2168)
+18        (40.7278, -73.8602)
+19    (40.762471, -73.985581)
+20      (40.72822, -73.79485)
+21      (40.75058, -73.99358)
+23        (40.4208, -74.5529)
