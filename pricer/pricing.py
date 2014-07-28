@@ -14,14 +14,13 @@ def grab_data_for_analysis(metro, conn):
     OUTPUT - Filtered DataFrame (df)
     '''    
     #Grabbing the data
-    all_metro_df = pd.read_sql_table('training' + metro + '_df', conn)
-    print 'Total scraped - ', len(all_metro_df)
+    SQL_df = pd.read_sql_table('training' + metro + '_df', conn)
+    print 'Total scraped - ', len(SQL_df)
 
-    all_metro_df = remove_duplicates(all_metro_df, 'heading')
+    SQL_df = remove_duplicates(SQL_df, 'heading')
 
     #Removing the NA
-    df = all_metro_df[all_metro_df['year'] != 'NaN']
-    tmpdf = all_metro_df[all_metro_df['year'] == 'NaN']
+    df = SQL_df[SQL_df['year'] != 'NaN']
     df = remove_key_words(df, 'repair')
     
     #Defining an upperbound and lower bound from the sample
