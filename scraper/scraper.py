@@ -1,13 +1,16 @@
+
 from parser import c_list_parser
-from utils_scraper import pickle_this
+from utils_scraper import pickle_this, f_df_save
 import threetaps
 import datetime
 import sqlalchemy as sql
 import datetime
+import requests
+import pandas as pd
+import cPickle
 
 
 #Query params
-
 macbookair13 = '''"Macbook Air 13" | "Macbook Air 13-inch" \
 | "Macbook Air 13inch" | "Macbook Air 13.3-Inch" | \
 "Macbook Air 13/11-inch" | "Macbook Air 13.3"'''
@@ -17,15 +20,15 @@ fields = "price,heading,annotations,timestamp,expires,body,images,external_url,l
 
 
 manhattan_tier1_macbookair13_params={'location.city': 'USA-NYM-NEY',
-                             'tier': '1',
-                             'code' :'CRAIG',
-                             'status': 'for_sale',
-                             'text': macbookair13,
-                             'state': 'available',
-                             'rpp': 100, 
-                             'has_price':'1',
-                             'retvals': fields
-                             }
+                                     'tier': '1',
+                                     'code' :'CRAIG',
+                                     'status': 'for_sale',
+                                     'text': macbookair13,
+                                     'state': 'available',
+                                     'rpp': 100, 
+                                     'has_price':'1',
+                                     'retvals': fields
+                                     }
 
 client = threetaps.Threetaps('973f359c55ef2ca99b891cd698476d44')
 
@@ -80,18 +83,31 @@ def get_training_data(tier_num, metro, just_append_override=False):
                 print len(parse_results),'SAVED'
         
         pg_num_iterator += 1
-        postings = get_postings(tier_num, metro,pg_num_iterator)
+        postings = get_postings(tier_num, metro, pg_num_iterator)
     
     return None
 
-# Save a DF to SQL table
-def f_df_save(df, table_name, sql_option='append'):
+def get_ebay_data():
+    api = 'c8cabb30069fe1dd5ea187a03a7294ad'
+    url = 'http://api.bidvoy.net/article/analyse/'
+    ebay_data = {}
+
+    try:
+        for year in xrange(2008, 2015):
+            resp = requests.get(url, params={'apikey': api, 'category': 111422, 'keyword': 'Macbook Air 13 ' + str(year)})            
+            ebay_data[year] = (float(resp.json()['data']['averagePrice']), 
+                                resp.json()['data']['keyword'], 
+                                int(resp.json()['data']['analyzedQuantity']))           
+    except TypeError:
+        print 'error with the API call'
+        print resp.json()
+        ebay_data = PXS    
     
-    if not table_name:
-        table_name = str(df) 
-
-    #Create the SQL table and the schema if it's the initial run
-    df.to_sql(table_name, engine, if_exists=sql_option)
-
-
+    ebay_df = pd.DataFrame(ebay_data)
+    #ask gio what I should do w this?
+    # f_df_save(ebay_df, 'ebay_data', 'replace')
+    cPickle.dump(ebay_df, open('ebay_data.pkl', 'w'))
+    print 'ebay_data - SAVED'
+    
+    return ebay_df
 

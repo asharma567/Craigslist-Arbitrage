@@ -1,12 +1,19 @@
-from sklearn.feature_extraction.text import TfidfVectorizer, TfidfTransformer
-from sklearn.feature_extraction import text as txt
+from sklearn.feature_extraction import text 
 from sklearn import decomposition
 from time import time
 
+'''
+Used for EDA
+clustering on the posting's body to find interesting trends within the sample "good" deals
+eg What were common words or phrases being used? 
+Why were people leaving this items at a discount?
+'''
+
 
 def NMF(bag_of_words, n_topics, n_top_words):
-    t0 = time()
 
+    #timing the clustering process
+    t0 = time()
     tfidf = get_tfv()
 
     #NMF for grouped comments
@@ -19,18 +26,18 @@ def NMF(bag_of_words, n_topics, n_top_words):
     print("done in %0.3fs." % (time() - t0))
     for topic_idx, topic in enumerate(nmf.components_):
         print("Topic #%d:" % topic_idx)
-        print(" ".join( [vocab[i] for i in topic.argsort()[:-n_top_words - 1:-1]] ))
-        print
+        print(" ".join( [vocab[i] for i in topic.argsort()[:-n_top_words - 1:-1]] ))        
 
 
-def get_tfv(params=None):
+def get_tfv():
+    '''
+    Bag of words method used for topic detection within sample of "good" deals and all postings
+    '''
     additional_stop_words = ['www','http','\n','\\n','macbook','air','13']
-    tfidf = TfidfVectorizer(min_df = 10, 
-                         #max_df =.99,
-                         #max_features = n_features, 
-                         stop_words = txt.ENGLISH_STOP_WORDS.union(additional_stop_words),
-                         sublinear_tf=True,
-                         ngram_range=(1,2),
-                         smooth_idf =True,
-                         )
+    tfidf = text.TfidfVectorizer(min_df=10, 
+                                     stop_words=text.ENGLISH_STOP_WORDS.union(additional_stop_words),
+                                     sublinear_tf=True,
+                                     ngram_range=(1,2),
+                                     smooth_idf=True,
+                                     )
     return tfidf

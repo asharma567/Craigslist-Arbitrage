@@ -2,8 +2,8 @@ import numpy as np
 
 def make_pricing_panel(df_recs, pxs):    
     '''
-    INPUT   DataFrame with field url_to_post ie hyperlinks to posts
-    OUTPUT  DataFrame with cleansed of dead links
+    INPUT   DataFrame with comprehensive set of recommendations
+    OUTPUT  DataFrame with fields from eBay: price, number of current auctions, spread(profit)
     '''    
     
     df_recs['year'] = df_recs['year'].astype(int)

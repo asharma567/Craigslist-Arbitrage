@@ -3,7 +3,7 @@ Macbook 13 air specs by year
 Pulled from Wikipedia as of 2/13/14
 Contains: Dictionary of year, technical specs, and corresponding regular expressions
 
-Used: Determining whether or not it's an upgrade feature
+Used: Determining whether or not it's an upgraded Macbook
 '''
 
 features_by_year = {

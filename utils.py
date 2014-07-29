@@ -1,8 +1,11 @@
-
-
 import sqlalchemy as sql
 
-
+def db_conn(conn_string = 'postgresql://Ajay:@localhost/arbitrage'):
+    # Setup database connection
+    engine = sql.create_engine(conn_string)
+    if engine.connect(): 
+        print 'Connected to SQL DB'
+        return engine 
 
 def return_active_links(df, arg_indices, top_n):
     # print 'rank\tindex\tlink'
@@ -30,6 +33,4 @@ def make_unicode(s):
 def testing_samplepage(metro):
     for i in get_postings(0, metro):
         print json.dumps(i, indent= 4, sort_keys= True)
-
-
 
