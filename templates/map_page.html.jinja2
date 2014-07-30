@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Find the opportunity</title> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+</head> 
+<body>
+  <div id="map" style="width: 1000px; height: 1100px;"></div>
+
+  <script type="text/javascript">
+    var locations = {{ markers_list_of_locations }};
+
+    function toggleBounce(marker,currBouncing) {
+      if (marker.getAnimation() != null) {
+	     marker.setAnimation(null);
+      } else {
+  	    marker.setAnimation(google.maps.Animation.BOUNCE);
+  	  }
+
+
+      if(currBouncing != null) {
+        marker.setAnimation(null);
+      }
+    }
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: new google.maps.LatLng(40.711329, -73.947076),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow(),
+        currBouncing  = null;
+  
+  
+    for (var i = 0; i < locations.length; i++) {  
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+
+
+         /*
+            google.maps.event.addListener(marker, 'mouseout', function() {
+                     marker.setAnimation(null);
+            });
+            
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                console.log('Marker ' + Object.keys(marker));
+                toggleBounce(marker,currBouncing);         
+                //update reference
+                currBouncing = marker;
+                console.log('Bouncing ' + Object.keys(currBouncing));
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+
+              }
+            })(marker, i)); */
+    } //end for
+  </script>
+</body>
+</html>
+
+
+

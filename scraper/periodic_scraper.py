@@ -19,7 +19,7 @@ def main():
     # get_training_data(2, metro, True)
     
     print 'Success! Craigslist'
-    # get_ebay_data()
+    get_ebay_data()
     print 'Success! eBay'
 
 

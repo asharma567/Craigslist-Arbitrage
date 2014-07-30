@@ -38,7 +38,6 @@ def grab_data_for_analysis(metro, conn):
 
     return df
 
-
     
 def modeled_indices(X, y, df, model_type= None):
     '''
@@ -57,13 +56,22 @@ def modeled_indices(X, y, df, model_type= None):
     else:
         model = search_best_params(X, y, df)
         y_hat = model.fit(X, y).predict(X)
+        
+    #Used for later for identifying 2stds
+    df['predicted_price'] = y_hat
+    df['residuals'] =  df['px'] - df['predicted_price']
     
-    return find_indices(y_hat, y)
+    #Residual as a percentage
+    df['price_distance_craig'] =  1 - df['px'] / df['predicted_price']
+
+    return df, find_indices(y_hat, y), model
+
+def find_stds(df, std_multiple=2):
+    '''
+    return all points 
+    '''
+    threshold = df['residuals'].mean() - std_multiple * df['residuals'].std()
+
+    return df[threshold > df['residuals']]
     
-
-
-
-
-
-
 

@@ -5,12 +5,12 @@ def make_pricing_panel(df_recs, pxs):
     INPUT   DataFrame with comprehensive set of recommendations
     OUTPUT  DataFrame with fields from eBay: price, number of current auctions, spread(profit)
     '''    
-    
     df_recs['year'] = df_recs['year'].astype(int)
     df_recs['ebay_price'] = df_recs['year'].apply(lambda x: pxs[x][0])
     df_recs['num_auctions'] = df_recs['year'].apply(lambda x: pxs[x][2])
     df_recs['spread'] = df_recs['ebay_price'] - df_recs['px']
-
+    df_recs['price_distance_ebay'] =  1 - df_recs['px'] / df_recs['ebay_price']
+    
     return df_recs
 
 def find_indices(y_hat, y):
@@ -23,3 +23,4 @@ def find_indices(y_hat, y):
     indices = np.argsort(delta)
 
     return indices
+

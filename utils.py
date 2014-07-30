@@ -7,6 +7,8 @@ def db_conn(conn_string = 'postgresql://Ajay:@localhost/arbitrage'):
         print 'Connected to SQL DB'
         return engine 
 
+engine = db_conn()
+
 def return_active_links(df, arg_indices, top_n):
     # print 'rank\tindex\tlink'
     links_to_be_shown = []
