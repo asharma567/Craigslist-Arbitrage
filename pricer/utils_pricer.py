@@ -92,6 +92,7 @@ def remove_all_same_features(input_df):
                             df['upgraded_HD']+\
                             df['upgraded_cpu']+\
                             df['upgraded_memory']
+    
     return remove_duplicates(df,'all_features')
 
 def remove_key_words(input_df,keyword):

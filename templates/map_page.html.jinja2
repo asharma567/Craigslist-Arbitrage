@@ -32,7 +32,7 @@
 
       // Create infobubble
       var infobubble = new InfoBubble({
-        maxWidth: 600
+        maxWidth: 400
       });
 
       // Tab 1
@@ -41,7 +41,10 @@
       infobubble.addTab('Tab 1', div[0]);
 
       // Tab 2
-      infobubble.addTab('Tab 2', '<p>This is tab 2</p>');
+      //var div2 = $('<div>');
+      //div2.html(locations[i][3]);
+      //infobubble.addTab('Tab 2', div2[0]);//'<p>This is tab 2</p>');
+      // infobubble.addTab('Tab 2', '<p>This is tab 2</p>');
 
       // Enable infobubble display on click
       google.maps.event.addListener(marker, 'click', (function (infobubble, marker) {

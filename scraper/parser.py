@@ -39,7 +39,6 @@ def c_list_parser(postings, query_execution_time):
         if f_find_year(str_heading_body):
             year = int(f_find_year(str_heading_body))
         else:
-            
             # if we can't find the year in the string, 
             # look for keywords and defualt to the latest year
             if f_find_year_by_words_2013(str_heading_body):
@@ -59,7 +58,7 @@ def c_list_parser(postings, query_execution_time):
         phone = f_get(dic, 'annotations', 'phone')
 
         #Location
-        loc_dict            = str(dic['location'])
+        loc_dict = str(dic['location'])
         
         region = f_get(dic, 'location', 'region')
         city = f_get(dic, 'location', 'city')
@@ -71,8 +70,8 @@ def c_list_parser(postings, query_execution_time):
             loc = city
             loc_metro = city[:7]
         else:
-             loc = None
-             loc_metro = f_get(dic, 'location','metro')
+            loc = None
+            loc_metro = f_get(dic, 'location','metro')
 
         #Craigslist posting information
         heading         = str(dic['heading'])

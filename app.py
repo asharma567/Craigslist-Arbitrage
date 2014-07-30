@@ -21,18 +21,10 @@ def dashboard():
     rec_size = 30
 
     #gets list with highest profit margins vs eBay
-    locs = [row_to_html(row) for index, row in display_pipeline_arb(metro, rec_size).iterrows()]
+    locs = [row_to_html(row) \
+            for index, row in display_pipeline_arb(metro, rec_size).iterrows()]
+    html_page = render_template('map_page.html.jinja', markers_list_of_locations = locs)
     
-
-    #show deals 2 stds out
-    #check for dups
-    html_page = render_template('map_page.html.jinja2', markers_list_of_locations = locs)
-                                    #code for future table
-                                    #df=arb_only_show_this_df.to_html(),
-                                    #links=arb_only_show_this_df)
-    
-
-
     return html_page
 
 if __name__ == '__main__':

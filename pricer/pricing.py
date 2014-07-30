@@ -59,7 +59,7 @@ def modeled_indices(X, y, df, model_type= None):
         
     #Used for later for identifying 2stds
     df['predicted_price'] = y_hat
-    df['residuals'] =  df['px'] - df['predicted_price']
+    df['residual'] =  df['px'] - df['predicted_price']
     
     #Residual as a percentage
     df['price_distance_craig'] =  1 - df['px'] / df['predicted_price']
@@ -70,8 +70,8 @@ def find_stds(df, std_multiple=2):
     '''
     return all points 
     '''
-    threshold = df['residuals'].mean() - std_multiple * df['residuals'].std()
+    threshold = df['residual'].mean() - std_multiple * df['residual'].std()
 
-    return df[threshold > df['residuals']]
+    return df[threshold > df['residual']]
     
 

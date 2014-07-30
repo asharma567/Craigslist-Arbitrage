@@ -1,53 +1,60 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Google Map API V3: Multi-Tab InfoWindow</title>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="js/infobubble.js"></script>
-<style type="text/css">
-body { margin: 20; padding: 20 }
-#map_canvas{
-  width: 740px;
-  height: 400px;
-}
-</style>
-<script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(37.286172, -121.80929),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            mapOptions);
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Craigslist Arbitrage</title> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+</head> 
+<body>
+  <div id="map" style="width: 1000px; height: 1100px;"></div>
 
-        var myLatlng = new google.maps.LatLng(37.286172, -121.80929);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: 'A Customized InfoWindow Marker'
-        });
+  <script type="text/javascript">
+    var locations = {{ markers_list_of_locations }};
+    console.log(locations);
+   function toggleBounce(marker, currBouncing) {
+     if (marker.getAnimation() != null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
 
-        var  infoBubble = new InfoBubble({
-          maxWidth: 300
-        });
 
-        var div = document.createElement('DIV');
-        div.innerHTML = 'Hello';
+       if(currBouncing != null)
+                  marker.setAnimation(null);
+     }
 
-        infoBubble.addTab('Tab 1', div);
-        infoBubble.addTab('Tab 2', "<B>This is tab 2</B>");
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: new google.maps.LatLng(40.711329, -73.947076),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
 
-        google.maps.event.addListener(marker, 'click', function() {
-          if (!infoBubble.isOpen()) {
-            infoBubble.open(map, marker);
-          }
-        });
-      }
-</script>
-</head>
-<body onload="initialize()">
-<div id="map_canvas"></div>
+    var infowindow = new google.maps.InfoWindow(),
+        currBouncing  = null;
+    
+    
+    for (var i = 0; i < locations.length; i++) {  
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        
+      });
+
+  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+            infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+
+        }
+      })(marker, i));
+   
+    } 
+    
+ 
+    
+
+
+  </script>
 </body>
 </html>

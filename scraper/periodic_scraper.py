@@ -15,8 +15,8 @@ def main():
     #Get the past week
     get_training_data(1, metro, True)
     
-    #Get the past two or so weeks
-    # get_training_data(2, metro, True)
+    #Get the past two weeks
+    get_training_data(2, metro, True)
     
     print 'Success! Craigslist'
     get_ebay_data()
