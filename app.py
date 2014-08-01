@@ -19,10 +19,11 @@ def dashboard():
     #Specify number of recommendations
     #gets filtered down by removal of dead links
     rec_size = 30
-
+    df = display_pipeline_arb(metro, rec_size)
+    cPickle.dump(df, open('recs.pkl','wb'))
     #gets list with highest profit margins vs eBay
     locs = [row_to_html(row) \
-            for index, row in display_pipeline_arb(metro, rec_size).iterrows()]
+            for index, row in df.iterrows()]
     html_page = render_template('map_page.html.jinja', markers_list_of_locations = locs)
     
     return html_page

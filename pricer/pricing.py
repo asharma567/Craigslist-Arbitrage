@@ -26,7 +26,7 @@ def grab_data_for_analysis(metro, conn):
     df = remove_key_words(df, 'repair')
     
     #Defining an upperbound and lower bound from the sample
-    df = price_filtering(df, 1300, 350)
+    df = price_filtering(df, 1300, 300)
 
     #unpacking location dictionary and extracting LatLong
     df['loc_dict'] = df['loc_dict'].apply(lambda x: ast.literal_eval(x))

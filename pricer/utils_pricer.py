@@ -37,7 +37,6 @@ def plot_pricevsyear(df, model=None, title=None):
     ax.scatter(df['year'], df['px'], alpha=0.5, color='orchid')
     fig.suptitle(title)
 
-    #could turn into def, df.columns
     ax.get_xaxis().get_major_formatter().set_useOffset(False)
     ax.set_xlabel(r'$Year$', fontsize=16)
     ax.set_ylabel(r'$Price$', fontsize=16)

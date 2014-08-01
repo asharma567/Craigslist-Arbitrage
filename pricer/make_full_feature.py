@@ -1,5 +1,5 @@
 import numpy as np
-import pand as pd
+import pandas as pd
 
 '''
 All functions were used during EDA

@@ -9,7 +9,10 @@ import datetime
 def row_to_html(df_row):
     '''
     Row of DataFrame -> Google Api Infowindow post
-    Populates the following stats:
+    Populates the following stats: 
+                                   <Title>
+                                   <Pic> 
+                                   <body>
                                       780.0 price
                                     - 870.86 eBay
                                     = 90.86 profit
@@ -20,7 +23,7 @@ def row_to_html(df_row):
 
                                     Age: 1 days, 11 hours, and 49 mins
     '''
-    
+
     headingopen = '<h1 id="firstHeading" class="firstHeading">'
     headingclose = '</h1>'
 
@@ -106,6 +109,7 @@ def display_pipeline_arb(metro, top_n=20):
     arb_only_show_this_df = show_this_df[show_this_df['spread'] > 0]
     
     return clean_dead_links(arb_only_show_this_df)
+    
 
     
 
