@@ -10,7 +10,7 @@ def db_conn(conn_string = 'postgresql://Ajay:@localhost/arbitrage'):
 engine = db_conn()
 
 def return_active_links(df, arg_indices, top_n):
-    # print 'rank\tindex\tlink'
+    
     links_to_be_shown = []
     ctr = 0
     dead_link_ctr = 0
@@ -18,7 +18,7 @@ def return_active_links(df, arg_indices, top_n):
     for i, link in enumerate(df.iloc[arg_indices]['url_to_post']):
         
         if check_if_removed(link): 
-            print 'removed 1'#recursive function maybe
+            print 'removed 1' 
             dead_link_ctr += 1
             continue
         ctr += 1

@@ -5,9 +5,11 @@ Capstone project - Zipfian Academy
 
 Basic idea: finding arbitrage opportunities on Craigslist at the snap of your fingers. Good deals go fast, so should you.
 
-#Proof-of-concept
+#Web-app
 
-ArbCraig is website app which grabs all the Craigslist Macbook Air 13" postings in the New York City Area and automatically shows you the best deals. Deals so good they could be sold for a profit on eBay. It knows how much each Macbook should be priced, based on the model year and other features. Macbooks which are priced abnormally low and undervalued given their specs are shown on a google map, so that one could have perspective of how much time and effort they'd have to put in to gain a profit.
+ArbCraig is a web-app which grabs all the Craigslist Macbook Air 13" postings in the New York City Area and automatically shows you the best deals. Deals so good they could be sold for a profit on eBay. 
+
+The algorithm knows how much each Macbook should be priced, based on the model year and other features. Macbooks which are priced abnormally low and undervalued given their specs are shown on a google map, so that one could have perspective of how much time and effort they'd have to put in to gain a profit.
 
 
 * eg
