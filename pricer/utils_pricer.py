@@ -15,7 +15,7 @@ def clean_dead_links(df):
     df['checker'] = df['url_to_post'].apply(check_if_removed)
     clean_df = df[df['checker'] == False]
     del clean_df['checker']
-    print 'removed - ', orig_size - len(clean_df)
+    print 'dead links removed - ', orig_size - len(clean_df)
     
     return clean_df
 

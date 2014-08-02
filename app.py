@@ -10,17 +10,26 @@ import cPickle
 
 app = Flask(__name__)
 
+#have something that runs the routine and pickles the df perhaps mains? 
+#or attach to the periodic scraper also clean the deadlinks
+
+#Have the dashboard just unpickle and map the 
 
 @app.route('/')
 def dashboard():
+    '''
+    This app should just display the stored 
+    recs that have been pickled earlier the day
+
+    It takes time to scrape, grid search, recommend, clean deadlinks, 
+    better do as a scheduled task vs doing it on the fly
+    '''
+
     #Lets just focus on the tristate area for now
     metro = 'USA-NYM'
+
+    df = cPickle.load(open('recs.pkl','rb')) 
    
-    #Specify number of recommendations
-    #gets filtered down by removal of dead links
-    rec_size = 30
-    df = display_pipeline_arb(metro, rec_size)
-    cPickle.dump(df, open('recs.pkl','wb'))
     #gets list with highest profit margins vs eBay
     locs = [row_to_html(row) \
             for index, row in df.iterrows()]

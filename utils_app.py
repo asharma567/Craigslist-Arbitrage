@@ -111,8 +111,6 @@ def display_pipeline_arb(metro, top_n=20):
     return clean_dead_links(arb_only_show_this_df)
     
 
-    
-
 def display_panel(df, indices=None, top_n=10):
     '''
     Returns the optimal records within the raw DataFrame
