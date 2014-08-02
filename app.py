@@ -10,10 +10,6 @@ import cPickle
 
 app = Flask(__name__)
 
-#have something that runs the routine and pickles the df perhaps mains? 
-#or attach to the periodic scraper also clean the deadlinks
-
-#Have the dashboard just unpickle and map the 
 
 @app.route('/')
 def dashboard():
