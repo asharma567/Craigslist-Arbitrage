@@ -11,6 +11,8 @@ ArbCraig is a web-app which grabs all the Craigslist Macbook Air 13" postings in
 
 The algorithm knows how much each Macbook should be priced, based on the model year and other features. Macbooks which are priced abnormally low and undervalued given their specs are shown on a google map, so that one could have perspective of how much time and effort they'd have to put in to gain a profit.
 
+The algorithm exploits the opportunity of the pricing opacity on Craigslist. People often don't have a sharp eye on what price to post for thier listing. They don't even know if it's competitve to other listings. This creates a perfect enviroment to profit of mispricings.
+
 
 * eg
 	* If there are two Macbooks that yield $30 in profit and one of them is 1.5 miles away vs 0.5 miles. Clearly the closer one is a better deal consider the amount effort(travel).
