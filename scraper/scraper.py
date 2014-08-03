@@ -104,8 +104,6 @@ def get_ebay_data():
         ebay_data = PXS    
     
     ebay_df = pd.DataFrame(ebay_data)
-    #ask gio what I should do w this?
-    # f_df_save(ebay_df, 'ebay_data', 'replace')
     cPickle.dump(ebay_df, open('ebay_data.pkl', 'w'))
     print 'ebay_data - SAVED'
     

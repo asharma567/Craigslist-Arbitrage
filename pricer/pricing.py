@@ -1,5 +1,5 @@
 import pandas as pd
-from utils_pricer import remove_duplicates, remove_key_words, price_filtering
+from utils_pricer import remove_duplicates, remove_key_words, price_filtering, clean_dead_links
 from sklearn.linear_model import Lasso
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.svm import SVR

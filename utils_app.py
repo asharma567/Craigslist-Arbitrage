@@ -106,9 +106,10 @@ def display_pipeline_arb(metro, top_n=20):
     df_modeled, indices, model = modeled_indices(X, y, df)
 
     show_this_df = display_panel(df, indices, top_n)
+    df = clean_dead_links(df)
     arb_only_show_this_df = show_this_df[show_this_df['spread'] > 0]
     
-    return clean_dead_links(arb_only_show_this_df)
+    return arb_only_show_this_df
     
 
 def display_panel(df, indices=None, top_n=10):

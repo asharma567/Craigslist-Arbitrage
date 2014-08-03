@@ -9,7 +9,7 @@ Basic idea: finding arbitrage opportunities on Craigslist at the snap of your fi
 
 ArbCraig is a web-app which grabs all the Craigslist Macbook Air 13" postings in the New York City Area and automatically shows you the best deals. Deals so good they could be sold for a profit on eBay. 
 
-The algorithm knows how much each Macbook should be priced, based on the model year and other features. Macbooks which are priced abnormally low and undervalued given their specs are shown on a google map, so that one could have perspective of how much time and effort they'd have to put in to gain a profit.
+The algorithm knows how much each Macbook should be priced, based on the model year and other features. Macbooks which are priced abnormally low and undervalued given their specs are shown on a google map, so that one could have perspective of how much time and effort they'd be willing to put in.
 
 The algorithm exploits the opportunity of the pricing opacity on Craigslist. People often don't have a sharp eye on what price to post for thier listing. They don't even know if it's competitve to other listings. This creates a perfect enviroment to profit of mispricings.
 
@@ -31,9 +31,14 @@ ArbCraig will be running at http://localhost:80
 
 Scrape
 
-> python scraper/periodic_scraper.py
+> sudo python main.py
 
-* Please note the periodic_scraper is designed to run at whatever frequency preferred. Ideally you'd want to everyday.
+main.py runs the full pricing recommendation routine:
+Scrape -> price -> pickle recommendations
+
+app.py opens the pickle and uses Google Maps API to plot latitude and longitude points
+
+* Please note the main.py is designed to run at whatever frequency preferred. Ideally you'd want to everyday.
 
 #Technologies
 
