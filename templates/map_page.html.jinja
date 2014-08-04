@@ -1,34 +1,79 @@
 <!DOCTYPE html>
 <html> 
 <head> 
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
-  <title>Craigslist Arbitrage</title> 
+<!--   <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Craigslist Arbitrage</title>  -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Craigslist Arbitrage</title>
   <script src="http://maps.google.com/maps/api/js?sensor=false" 
           type="text/javascript"></script>
+
 </head> 
 <body>
-  <div id="map" style="width: 1000px; height: 1100px;"></div>
+  <!-- <div id="map" style="width: 1000px; height: 1100px;"></div> -->
+  <header id="banner" class="body">
+    <h1>Craigslist Arbitrage <strong>HTML5 in the year <del>2022</del> <ins>2009</ins></strong></h1>
+   
+    <nav><ul>
+      <li class="active"><a href="#">home</a></li>
+      <li><a href="#">portfolio</a></li>
+   
+      <li><a href="#">blog</a></li>
+      <li><a href="#">contact</a></li>
+    </ul></nav>
+   
+  </header>
+  <div id="map" style="width: 700px; height: 450px;"></div>
 
   <script type="text/javascript">
     var locations = {{ markers_list_of_locations }};
     console.log(locations);
+
+   
    function toggleBounce(marker, currBouncing) {
      if (marker.getAnimation() != null) {
       marker.setAnimation(null);
     } else {
       marker.setAnimation(google.maps.Animation.BOUNCE);
     }
-
-
        if(currBouncing != null)
                   marker.setAnimation(null);
-     }
+    }
+    var styles = [
+    {
+      featureType: "all",
+      stylers: [
+        { saturation: -80 }
+      ]
+    },{
+      featureType: "road.arterial",
+      elementType: "geometry",
+      stylers: [
+        { hue: "#00ffee" },
+        { saturation: 50 }
+      ]
+    },{
+      featureType: "poi.business",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+    ];
+    // Create a new StyledMapType object, passing it the array of styles,
+    // as well as the name to be displayed on the map type control.
+    var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
-      center: new google.maps.LatLng(40.711329, -73.947076),
+      center: new google.maps.LatLng(40.718217, -73.998284),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
+        //Associate the styled map with the MapTypeId and set it to display.
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
 
     var infowindow = new google.maps.InfoWindow(),
         currBouncing  = null;
@@ -48,12 +93,7 @@
 
         }
       })(marker, i));
-   
-    } 
-    
- 
-    
-
+    }  
 
   </script>
 </body>
