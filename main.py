@@ -1,5 +1,4 @@
 from scraper.periodic_scraper import scrape_craig_ebay
-from pricer.utils_pricer import clean_dead_links
 from utils_app import display_pipeline_arb
 import cPickle
 
