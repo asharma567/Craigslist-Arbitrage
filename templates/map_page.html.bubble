@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Find the opportunity</title> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+  <script type="text/javascript" src="/static/js/infobubble.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head> 
+<body>
+  <div id="map" style="width: 1000px; height: 1100px;"></div>
+
+  <script type="text/javascript">
+
+  $(function () {
+    var locations = {{ markers_list_of_locations }};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: new google.maps.LatLng(40.711329, -73.947076),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    // For each locations, create a marker and tabbed InfoBubble
+    for (var i = 0; i < locations.length; i++) {  
+      // Create marker
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+      });
+
+      // Create infobubble
+      var infobubble = new InfoBubble({
+        maxWidth: 400
+      });
+
+      // Tab 1
+      var div = $('<div>');
+      div.html(locations[i][0]);
+      infobubble.addTab('Tab 1', div[0]);
+
+      // Tab 2
+      //var div2 = $('<div>');
+      //div2.html(locations[i][3]);
+      //infobubble.addTab('Tab 2', div2[0]);//'<p>This is tab 2</p>');
+      // infobubble.addTab('Tab 2', '<p>This is tab 2</p>');
+
+      // Enable infobubble display on click
+      google.maps.event.addListener(marker, 'click', (function (infobubble, marker) {
+        return function () {
+          if (!infobubble.isOpen()) {
+            infobubble.open(map, marker);
+          }
+        }
+      })(infobubble, marker));
+    }
+  
+
+
+         /*
+
+            function toggleBounce(marker,currBouncing) {
+              if (marker.getAnimation() != null) {
+               marker.setAnimation(null);
+              } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+              }
+
+
+              if(currBouncing != null) {
+                marker.setAnimation(null);
+              }
+            }
+
+            google.maps.event.addListener(marker, 'mouseout', function() {
+                     marker.setAnimation(null);
+            });
+            
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                console.log('Marker ' + Object.keys(marker));
+                toggleBounce(marker,currBouncing);         
+                //update reference
+                currBouncing = marker;
+                console.log('Bouncing ' + Object.keys(currBouncing));
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+
+              }
+            })(marker, i)); */
+  })
+
+  </script>
+</body>
+</html>
+
+
+

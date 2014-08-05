@@ -5,15 +5,60 @@ import requests
 import numpy as np
 import re
 
+import StringIO
+import socket
+import urllib
+
+from socks import socks  # SocksiPy module
+import stem.process
+
+from stem.util import term
+
 def clean_dead_links(df):
     '''
     Filters DataFrame of of dead links (posts taken down)
     INPUT   DataFrame with field url_to_post ie hyperlinks to posts
     OUTPUT  DataFrame with cleansed of dead links
     '''
+
+    SOCKS_PORT = 80
+
+    # Set socks proxy and wrap the urllib module
+    socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', SOCKS_PORT)
+    socket.socket = socks.socksocket
+
+    # Perform DNS resolution through the socket
+    def getaddrinfo(*args):
+      return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', (args[0], args[1]))]
+
+    socket.getaddrinfo = getaddrinfo
     orig_size = len(df)
     
     df['checker'] = df['url_to_post'].apply(check_if_removed)
+
+    # Start an instance of Tor configured to only exit through Russia. This prints
+    # Tor's bootstrap information as it starts. Note that this likely will not
+    # work if you have another Tor instance running.
+    def print_bootstrap_lines(line):
+        if "Bootstrapped " in line:
+            print term.format(line, term.Color.BLUE)
+        return None
+
+    print term.format("Starting Tor:\n", term.Attr.BOLD)
+
+    tor_process = stem.process.launch_tor_with_config(
+      config = {
+        'SocksPort': str(SOCKS_PORT),
+        'ExitNodes': '{ru}',
+      },
+      init_msg_handler = print_bootstrap_lines,
+    )
+
+    print term.format("\nChecking our endpoint:\n", term.Attr.BOLD)
+    print term.format(query("https://www.atagar.com/echo.php"), term.Color.BLUE)
+
+    tor_process.kill()
+
     clean_df = df[df['checker'] == False]
     del clean_df['checker']
     print 'dead links removed - ', orig_size - len(clean_df)

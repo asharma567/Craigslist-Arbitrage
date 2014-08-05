@@ -142,8 +142,8 @@ def search_best_params(X, y, df):
                         optimal_params = (a, t, w, p, maxi, avg, best_model)
                         optimal_model['L1'] = optimal_params
                         
-    print 'alpha=%d, tol=%d, warm_start=%s, positive=%s' % \
-    (optimal_params[0], optimal_params[1], optimal_params[2], optimal_params[3])
+    # print 'alpha=%d, tol=%d, warm_start=%s, positive=%s' % \
+    print (optimal_params[0], optimal_params[1], optimal_params[2], optimal_params[3])
     
     print 'Max - %d, Avg Spread - %d' % \
     (optimal_params[4], optimal_params[5])

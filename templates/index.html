@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Ajay Sharma (ArbCraig.com)">
+	
+	<title>Craigslist Arbitrage</title>
+  	<script src="http://maps.google.com/maps/api/js?sensor=false" 
+            type="text/javascript"></script>
+
+	<link rel="shortcut icon" href="static/images/gt_favicon.png">
+	
+	<!-- Bootstrap itself -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="static/css/magister.css">
+
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+<body class="theme-invert">
+
+<nav class="mainmenu">
+	<div class="container">
+		<div class="dropdown">
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#head" class="active">App</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Get in touch</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!-- Main (Home) section -->
+<section class="section" id="head">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
+
+				<!-- Site Title, your name, HELLO msg, etc. -->
+				<h1 class="title">Craigslist Arbitrage </h1>
+				<!-- <h2 class="subtitle">My app</h2> -->
+
+				<!-- Short introductory (optional) -->
+				<h3 class="tagline">finds the deals for you</h3>
+                <iframe src="/map" width=900px height=600px frameborder="0" scrolling="no"></iframe> 
+	           			
+	
+			</div> <!-- /col -->
+
+		</div> <!-- /row -->
+	   
+	</div>
+
+</section>
+
+<!-- Second (About) section -->
+<section class="section" id="about">
+	<div class="container">
+	
+		<h2 class="text-center title">About</h2>
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-2">    
+				<h5><strong>So what's the deal?<br></strong></h5>
+				<p>
+				ArbCraig is a web-app which grabs all the Craigslist Macbook Air 13" postings in the New York City Area and automatically shows you the best deals. Deals so good they could be sold for a profit on eBay. This is a proof of concept design with a fixed focus on location and product. Though the model is very much flexible to other assumptions.
+				<br><br>
+				The algorithm knows how much each Macbook should be priced, based on the model year and other features. Macbooks which are priced abnormally low and undervalued given their specs are shown on a google map, so that one could have perspective of how much time and effort they'd be willing to put in.
+				<br><br>
+				The algorithm exploits the opportunity of the pricing opacity on Craigslist. People often don't have a sharp eye on what price to post for thier listing. They don't even know if it's competitve to other listings. This creates a perfect enviroment to profit of mispricings.
+				</p>    
+			</div>
+			<div class="col-sm-4">
+				<h5><strong>How does the model work? <br></strong></h5>    
+				<p>First we find the model which best fits the distribution of data: price being the label, features being model year, applecare, etc. This process optimizes for highest arbitrage recommendations.
+				<br>
+				We then measure the mean absolute error of each point and keep the ones with the highest negative residual. From there we select the ones that yield a positive profit if we sold it.Thus, resulting in list of recommendations which are optimal intramarket (Craigslist) or across-markets (eBay).
+				</p>
+				<h5><strong>My motivation <br></strong></h5>
+				<p>
+				I was in the market for a Macbook Air a couple months ago. But I didn't have time, data, or patience to figure out what a good deal was relative to the market. Basically, how do I know if this posting I'm looking at is a good deal or not versus everything else that's out there? is it a bargain?
+				<br><br>
+				And if it was infact a bargain it had already been sold, all that time wasted sifting through these irrelevent listings. I needed to develop something that surface these gems at the snap of the finger. Hence, I thought of this as a fun and useful Data Science Product.
+				<h5><strong>Thanks everyone @ Zipfian<br></strong></h5>    
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Fourth (Contact) section -->
+<section class="section" id="contact">
+	<div class="container">
+	
+		<h2 class="text-center title">Get in touch</h2>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<p class="lead">Have a question about the app, or want to suggest a new feature?</p>
+				<p>Please email me!</p>
+				<p><b>asharma567567@gmail.com</b><br><br></p>
+				<ul class="list-inline list-social">
+					<li><a href="https://github.com/asharma567/Craigslist-Arbitrage" class="btn btn-link"><i class="fa fa-github fa-fw"></i> Github</a></li>
+					<li><a href="https://www.linkedin.com/in/mrasharma" class="btn btn-link"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="static/js/modernizr.custom.72241.js"></script>
+<!-- Custom template scripts -->
+<script src="static/js/magister.js"></script>
+</body>
+</html>

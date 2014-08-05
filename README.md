@@ -3,7 +3,7 @@
 Capstone project - Zipfian Academy
 [ArbCraig.com](https://www.arbcraig.com)
 
-Basic idea: finding arbitrage opportunities on Craigslist at the snap of your fingers. Good deals go fast, so should you.
+Basic idea: finding arbitrage opportunities on Craigslist at the snap of your finger. Good deals go fast, so should you.
 
 #Web-app
 

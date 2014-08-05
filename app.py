@@ -9,8 +9,14 @@ import cPickle
 
 app = Flask(__name__)
 
-
 @app.route('/')
+def home():
+    html_page = render_template('index.html')
+
+    return html_page
+
+
+@app.route('/map')
 def dashboard():
     '''
     This app should just display the stored 
@@ -28,6 +34,7 @@ def dashboard():
     #gets list with highest profit margins vs eBay
     locs = [row_to_html(row) \
             for index, row in df.iterrows()]
+    # html_page = render_template('index.html', \
     html_page = render_template('map_page.html.jinja', \
                                 markers_list_of_locations = locs)
 

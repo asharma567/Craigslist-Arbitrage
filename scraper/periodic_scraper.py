@@ -11,7 +11,7 @@ def scrape_craig_ebay(metro):
     get_training_data(0, metro, False)
 
     #Get the past week
-    get_training_data(1, metro, True)
+    # get_training_data(1, metro, True)
     
     #Get the past two weeks
     # get_training_data(2, metro, True) 
