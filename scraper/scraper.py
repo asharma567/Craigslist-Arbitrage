@@ -94,7 +94,7 @@ def get_ebay_data():
 
     try:
         for year in xrange(2008, 2015):
-            resp = requests.get(url, params={'apikey': api, 'category': 111422, 'keyword': 'Macbook Air 13 ' + str(year)})            
+            resp = requests.get(url, params={'apikey': api, 'category': 111422, 'keyword': 'Macbook Air 13 ' + str(year)})
             ebay_data[year] = (float(resp.json()['data']['averagePrice']), 
                                 resp.json()['data']['keyword'], 
                                 int(resp.json()['data']['analyzedQuantity']))           

@@ -42,7 +42,8 @@ def row_to_html(df_row):
     popen = '<p ALIGN="RIGHT">'
     pclose = '</p>'
 
-    distance_from_mean_craigs = "{:.0%}".format(df_row['price_distance_craig'])  
+    # distance_from_mean_craigs = "{:.0%}".format(df_row['price_distance_craig'])
+    distance_from_mean_craigs = "{:.0}".format(df_row['price_distance_craig'])
     distance_from_mean_ebay = "{:.0%}".format(1 - df_row['px'] / df_row['ebay_price'])
 
     # All properties of an Infowindow Google Maps Api
@@ -55,10 +56,9 @@ def row_to_html(df_row):
                         ' - ' + str(df_row['ebay_price']) + ' eBay' + newline + \
                         '=  ' + str(df_row['spread'])  + ' profit' + footend
     
-    distance = popen + 'percentage below mean' + newline + \
-                     str(distance_from_mean_ebay) + ' eBay'+ newline + \
-                     str(distance_from_mean_craigs) + ' Craigs' + pclose
-    
+    distance = popen + 'standard deviations ' + str(distance_from_mean_craigs) + ' Craigs' + newline + \
+                     + 'percentage below mean' + str(distance_from_mean_ebay) + ' eBay' + pclose
+
     duration = popen + 'Age: ' + posting_duration_calc(str(df_row['posting_time'])) + pclose
     craig_posting_img = str(df_row['image_url'].split('|')[0])
 
@@ -106,7 +106,7 @@ def display_pipeline_arb(metro, top_n=20):
     df_modeled, indices, model = modeled_indices(X, y, df)
 
     show_this_df = display_panel(df, indices, top_n)
-    df = clean_dead_links(df)
+    # df = clean_dead_links(df)
     arb_only_show_this_df = show_this_df[show_this_df['spread'] > 0]
     
     return arb_only_show_this_df

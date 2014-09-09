@@ -21,7 +21,7 @@ def clean_dead_links(df):
     return clean_df
 
 def check_if_removed(link):
-    checker = lambda x: bool(re.search(r'will be removed in just a few minutes', x))
+    checker = lambda x: bool(re.search(r'will be removed in just a few minutes', x.lower()))
     r = requests.get(link)
     if r.status_code == 200:
         if checker(r.text): return True

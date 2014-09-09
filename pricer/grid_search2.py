@@ -46,7 +46,8 @@ def routine(X, y, model, df, pxs):
     '''
     # this should be in some proportion to the sample size
     top_n_recs = int(len(df) * .15)
-    top_indices = find_indices(model.fit(X,y).predict(X),y)
+    if top_n_recs < 10: raise Exception("too few observations")
+    top_indices = find_indices(model.fit(X, y).predict(X), y)
     df  = df.iloc[top_indices][['heading', 'year', 'px']][:top_n_recs]
     max_price = make_pricing_panel(df, pxs)['spread'].max()
     average_spread = make_pricing_panel(df, pxs)['spread'].mean()
@@ -58,7 +59,7 @@ def search_best_params(X, y, df):
     Grid Search for the model that yields the optimal recommendations table. 
     Validating versus eBay pricing. Optimizes for the highest spread: eBay - Craigslist = Profit
     INPUT  Feature Matrix, labels, Original DataFrame, eBay prices
-    OUTPUT Optimal tuned model, prints all model with thier best parameters
+    OUTPUT Optimal tuned model, prints all model with their best parameters
     '''
     print '# of examples', len(X)
     
@@ -109,6 +110,7 @@ def search_best_params(X, y, df):
                                 degree=d)
 
                     maxi, avg = routine(X, y, model, df, pxs)
+
                     #write this as a function
                     if avg > bestavg:
                         best_model = model
@@ -136,14 +138,15 @@ def search_best_params(X, y, df):
                                   positive=p)
                     
                     maxi, avg = routine(X, y, model, df, pxs)
+
                     if avg > bestavg:
                         best_model = model
                         bestavg = avg
                         optimal_params = (a, t, w, p, maxi, avg, best_model)
                         optimal_model['L1'] = optimal_params
-                        
-    # print 'alpha=%d, tol=%d, warm_start=%s, positive=%s' % \
-    print (optimal_params[0], optimal_params[1], optimal_params[2], optimal_params[3])
+
+    print 'alpha=%d, tol=%d, warm_start=%s, positive=%s' % \
+    (optimal_params[0], optimal_params[1], optimal_params[2], optimal_params[3])
     
     print 'Max - %d, Avg Spread - %d' % \
     (optimal_params[4], optimal_params[5])

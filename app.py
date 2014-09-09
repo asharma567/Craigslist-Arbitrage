@@ -1,10 +1,5 @@
 from flask import Flask, render_template
-import requests
-import pandas as pd
-import sqlalchemy as sql
-from datetime import timedelta
-from pricer.utils_pricer import clean_dead_links
-from utils_app import display_pipeline_arb, row_to_html
+from utils_app import row_to_html
 import cPickle
 
 app = Flask(__name__)
@@ -27,16 +22,13 @@ def dashboard():
     '''
 
     #Lets just focus on the tristate area for now
-    metro = 'USA-NYM'
-
     df = cPickle.load(open('recs.pkl','rb')) 
    
     #gets list with highest profit margins vs eBay
     locs = [row_to_html(row) \
             for index, row in df.iterrows()]
-    # html_page = render_template('index.html', \
     html_page = render_template('map_page.html.jinja', \
-                                markers_list_of_locations = locs)
+                                markers_list_of_locations=locs)
 
     return html_page
 

@@ -22,7 +22,7 @@ def grab_data_for_analysis(metro, conn):
     SQL_df = remove_duplicates(SQL_df, 'heading')
 
     #Removing the NA
-    df = SQL_df[SQL_df['year'] != 'NaN']
+    df = SQL_df[SQL_df['year'] != 0]
     df = remove_key_words(df, 'repair')
     
     #Defining an upperbound and lower bound from the sample
@@ -62,7 +62,10 @@ def modeled_indices(X, y, df, model_type= None):
     df['residual'] =  df['px'] - df['predicted_price']
     
     #Residual as a percentage
-    df['price_distance_craig'] =  1 - df['px'] / df['predicted_price']
+    # df['price_distance_craig'] =  1 - df['px'] / df['predicted_price']
+    #change specifically so we could show in terms of stand deviation vs percentage
+    df['price_distance_craig'] = df['residual'] / df['residual'].std()
+
 
     return df, find_indices(y_hat, y), model
 

@@ -3,12 +3,13 @@ import datetime
 import re
 from utils_scraper import f_get, pickle_this, re_search
 from model_dict import features_by_year
+import pdb 
 
 f_conv_date                 = lambda x: datetime.datetime.fromtimestamp(int(x)).strftime('%Y-%m-%d %H:%M:%S')
-f_make_images_string        = lambda x: str('|'.join([item['full'].decode('utf8') for item in x]))
+f_make_images_string        = lambda x: str('|'.join([item.get('full','NaN').decode('utf8') for item in x]))
 f_find_year                 = lambda x: re_search(r'\b(200[8-9]|201[0-4])\b', x)
 f_find_year_by_words_2013   = lambda x: re_search(r'MD760LL/A', x.lower())
-f_find_year_by_words        = lambda x: re_search(r'BNIB|brand new|sealed|latest|unopened|MD760LL/B', x.lower())
+f_find_year_by_words        = lambda x: re_search(r'bnib|brand new|sealed|latest|unopened|md760ll\/b', x.lower())
 f_negotiability_obo         = lambda x: re_search(r'\bobo|best offer', x.lower())
 f_negotiability_firm        = lambda x: re_search(r'\bfirm', x.lower())
 f_base_or_upgrade           = lambda x,y: bool (re_search(y, x.lower()))
@@ -39,7 +40,7 @@ def c_list_parser(postings, query_execution_time):
         if f_find_year(str_heading_body):
             year = int(f_find_year(str_heading_body))
         else:
-            # if we can't find the year in the string, 
+            # if we can't find the year in the string,
             # look for keywords and defualt to the latest year
             if f_find_year_by_words_2013(str_heading_body):
                 year = current_year - 1
@@ -79,7 +80,10 @@ def c_list_parser(postings, query_execution_time):
         px              = float(dic['price'])
         posting_time    = f_conv_date(dic['timestamp'])
         exp_time        = f_conv_date(dic['expires'])
+        # try:
         image_url       = f_make_images_string(dic['images'])
+        # except:
+            # print dic['images']
         image_url_ct    = len(dic['images'])
         url_to_post     = str(dic['external_url'])
 
@@ -97,16 +101,18 @@ def c_list_parser(postings, query_execution_time):
         cpu    = f_find_cpu(str_heading_body)
         memory = f_find_memory(str_heading_body)
         HD     = f_find_HD(str_heading_body)
-        
+
         # if we can't even get one of these features skip
         if not year and not cpu and not memory and not HD: continue
         
         #just for handling the data later
-        if not year: year = 'NaN'
-        if not cpu: cpu = 'NaN'
-        if not memory: memory = 'NaN'
-        if not HD: HD = 'NaN'
-    
+        if not year: year = 0
+        if not cpu: cpu = 'NaNcpu'
+        if not memory: memory = 'NaNmemory'
+        if not HD: HD = 'NaNHD'
+
+
+
         #All the data extracted from a single post        
         df_row = pd.DataFrame({
                                 'heading'        :heading,
