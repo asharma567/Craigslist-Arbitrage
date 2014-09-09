@@ -11,24 +11,40 @@ import cPickle
 
 
 #Query params
-macbookair13 = '''"Macbook Air 13" | "Macbook Air 13-inch" \
-| "Macbook Air 13inch" | "Macbook Air 13.3-Inch" | \
-"Macbook Air 13/11-inch" | "Macbook Air 13.3"'''
+macbookair13 = '''
+"Macbook Air 13" | \
+"Macbook Air 13-inch" | \
+"Macbook Air 13inch" | \
+"Macbook Air 13.3-Inch" | \
+"Macbook Air 13/11-inch" | \
+"Macbook Air 13.3"
+'''
 
 
-fields = "price,heading,annotations,timestamp,expires,body,images,external_url,location,deleted,flagged_status"
+fields = '''
+price,
+heading,
+annotations,
+timestamp,
+expires,
+body,
+images,
+external_url,
+location,
+deleted,flagged_status"
+'''
 
-
-manhattan_tier1_macbookair13_params={'location.city': 'USA-NYM-NEY',
-                                     'tier': '1',
-                                     'code' :'CRAIG',
-                                     'status': 'for_sale',
-                                     'text': macbookair13,
-                                     'state': 'available',
-                                     'rpp': 100, 
-                                     'has_price':'1',
-                                     'retvals': fields
-                                     }
+manhattan_tier1_macbookair13_params = {
+'location.city': 'USA-NYM-NEY',
+'tier': '1',
+'code' :'CRAIG',
+'status': 'for_sale',
+'text': macbookair13,
+'state': 'available',
+'rpp': 100, 
+'has_price':'1',
+'retvals': fields
+}
 
 client = threetaps.Threetaps('973f359c55ef2ca99b891cd698476d44')
 
