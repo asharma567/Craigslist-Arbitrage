@@ -53,8 +53,8 @@ app.py opens the pickle and uses Google Maps API to plot latitude and longitude 
 	* Requests
 	* Ast
 
-* 3taps api: 3taps.com/developers-overview.php
-* eBay scraper: API Providerhttp://www.bidvoy.net
+* 3taps api: http://3taps.com/developers-overview.php
+* eBay scraper API Provider: http://www.bidvoy.net
 
 * Front end:
 
