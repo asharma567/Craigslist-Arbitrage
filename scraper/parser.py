@@ -8,7 +8,7 @@ import pdb
 f_conv_date                 = lambda x: datetime.datetime.fromtimestamp(int(x)).strftime('%Y-%m-%d %H:%M:%S')
 f_make_images_string        = lambda x: str('|'.join([item.get('full','NaN').decode('utf8') for item in x]))
 f_find_year                 = lambda x: re_search(r'\b(200[8-9]|201[0-4])\b', x)
-f_find_year_by_words_2013   = lambda x: re_search(r'MD760LL/A', x.lower())
+f_find_year_by_words_2013   = lambda x: re_search(r'md760ll\/a', x.lower())
 f_find_year_by_words        = lambda x: re_search(r'bnib|brand new|sealed|latest|unopened|md760ll\/b', x.lower())
 f_negotiability_obo         = lambda x: re_search(r'\bobo|best offer', x.lower())
 f_negotiability_firm        = lambda x: re_search(r'\bfirm', x.lower())
