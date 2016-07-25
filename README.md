@@ -3,8 +3,11 @@
 
 This project's a couple of years old and I did it out frustration of using craigslist and my insatiable drive to find rock-bottom deals. This is a generalizable concept which is extendable to any two or one market of items. As such, I'm focusing on my to-date frustrations... sublet hunting in NYC. Target markets: Craigslist, Airbnb. More to come on this. 
 
-[ArbCraig.com](http://ArbCraig.com)
-*Special note: Site is currently down at the moment, I'll have it back up in a week or so hopefully.
+[ArbCraig.com](http://54.183.100.62/)
+
+![snapshot](images/table 1-1.png?raw=true)
+
+_*Special note: It's no longer actively refreshing listings due to the legal decision from 3taps vs. Craigslist_
 
 Basic idea: Finding arbitrage opportunities and undervalued deals on Craigslist at the snap of your fingers. 
 
