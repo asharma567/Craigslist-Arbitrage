@@ -5,7 +5,7 @@ This project's a couple of years old and I did it out frustration of using craig
 
 [ArbCraig.com](http://54.183.100.62/)
 
-![snapshot](images/table 1-1.png?raw=true)
+![](screen_splash.png?raw=true)
 
 _*Special note: It's no longer actively refreshing listings due to the legal decision from 3taps vs. Craigslist_
 
